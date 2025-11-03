@@ -1,0 +1,67 @@
+<script setup lang="ts">
+const benefits = [
+  {
+    icon: 'i-carbon-certificate-check',
+    title: 'Quality Assured',
+    description: 'All our products meet international quality standards and undergo rigorous testing.',
+  },
+  {
+    icon: 'i-carbon-delivery-truck',
+    title: 'Reliable Supply',
+    description: 'Consistent delivery schedules and dependable supply chain management.',
+  },
+  {
+    icon: 'i-carbon-user-favorite',
+    title: 'Expert Support',
+    description: 'Dedicated account managers and technical support team available 24/7.',
+  },
+  {
+    icon: 'i-carbon-sustainability',
+    title: 'Sustainable Solutions',
+    description: 'Committed to environmental responsibility and sustainable energy practices.',
+  },
+  {
+    icon: 'i-carbon-partnership',
+    title: 'B2B Expertise',
+    description: 'Deep understanding of industrial needs and customized business solutions.',
+  },
+  {
+    icon: 'i-carbon-chart-line',
+    title: 'Competitive Pricing',
+    description: 'Best-in-market pricing without compromising on quality or service.',
+  },
+]
+</script>
+
+<template>
+  <section class="section-padding bg-white dark:bg-jetspan-gray-dark">
+    <div class="section-container">
+      <div class="mb-16 text-center">
+        <h2 class="text-4xl text-jetspan-black font-bold mb-4 md:text-5xl dark:text-white">
+          Why Choose Jetspan?
+        </h2>
+        <p class="text-xl text-jetspan-gray mx-auto max-w-3xl dark:text-gray-400">
+          Your trusted partner in energy solutions with proven excellence
+        </p>
+      </div>
+
+      <div class="gap-8 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+        <div
+          v-for="(benefit, index) in benefits"
+          :key="index"
+          class="group text-center"
+        >
+          <div class="mb-6 rounded-full bg-jetspan-yellow/20 inline-flex h-20 w-20 transition-colors duration-300 items-center justify-center group-hover:bg-jetspan-yellow">
+            <div :class="benefit.icon" class="text-4xl text-jetspan-yellow transition-colors duration-300 group-hover:text-jetspan-black" />
+          </div>
+          <h3 class="text-xl text-jetspan-black font-bold mb-3 dark:text-white">
+            {{ benefit.title }}
+          </h3>
+          <p class="text-jetspan-gray dark:text-gray-400">
+            {{ benefit.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

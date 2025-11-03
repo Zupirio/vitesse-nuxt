@@ -1,9 +1,9 @@
 <template>
-  <main class="px-10 py-20 text-center">
-    <slot />
+  <div class="bg-jetspan-light min-h-screen dark:bg-jetspan-black">
+    <Header />
+    <main class="pt-20">
+      <slot />
+    </main>
     <Footer />
-    <div class="text-sm mx-auto mt-5 text-center opacity-25">
-      [Default Layout]
-    </div>
-  </main>
+  </div>
 </template>

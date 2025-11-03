@@ -27,8 +27,8 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
+        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#F2F2F2' },
+        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#0D0D0D' },
       ],
     },
   },
@@ -58,9 +58,8 @@ export default defineNuxtConfig({
       },
     },
     prerender: {
-      crawlLinks: false,
-      routes: ['/'],
-      ignore: ['/hi'],
+      crawlLinks: true,
+      routes: ['/', '/products', '/about', '/contact'],
     },
   },
 
