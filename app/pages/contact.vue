@@ -102,6 +102,7 @@ const contactMethods = [
       subtitle="Ready to discuss your energy requirements? Our team is here to help you find the perfect solution for your business needs."
       badge="Let's Talk"
       badge-icon="i-carbon-chat"
+      bg-image="/assets/hero/pexels-office-5467595.jpg"
       compact
     />
 

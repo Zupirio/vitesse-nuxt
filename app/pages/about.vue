@@ -44,6 +44,7 @@ const values = [
       subtitle="Your trusted partner in energy solutions, dedicated to powering industrial growth across South Africa."
       badge="Our Story"
       badge-icon="i-carbon-enterprise"
+      bg-image="/assets/hero/pexels-rezwan-1216589.jpg"
       compact
     />
 

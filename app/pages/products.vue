@@ -19,6 +19,7 @@ useSeoMeta({
       subtitle="Comprehensive energy solutions designed to meet the demanding requirements of industrial and commercial operations across South Africa."
       badge="Diesel · Solar · Gas · Oil · Petroleum"
       badge-icon="i-carbon-catalog"
+      bg-image="/assets/hero/pexels-refinery-6060191.jpg"
       compact
     />
 

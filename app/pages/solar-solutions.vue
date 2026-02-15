@@ -17,6 +17,7 @@ useSeoMeta({
       subtitle="Commercial and industrial solar systems designed for South African conditions."
       badge="Load Shedding? Sorted."
       badge-icon="i-carbon-solar-panel"
+      bg-image="/assets/hero/pexels-solar-6961215.jpg"
     >
       <template #actions>
         <div class="flex flex-col gap-4 sm:flex-row">

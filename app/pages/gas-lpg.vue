@@ -23,6 +23,7 @@ const stats = [
       subtitle="Bulk LPG supply for industry, hospitality, and agriculture."
       badge="SANS 10087 Compliant"
       badge-icon="i-carbon-flame"
+      bg-image="/assets/hero/pexels-gas-32399133.jpg"
     >
       <template #actions>
         <div class="flex flex-col gap-4 sm:flex-row">

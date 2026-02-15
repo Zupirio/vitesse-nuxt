@@ -15,6 +15,7 @@ const stats = [
     :subtitle="companyInfo.description"
     badge="Diesel · Solar · Gas · Oil"
     badge-icon="i-carbon-flash"
+    bg-image="/assets/hero/pexels-blitzboy-1171054.jpg"
   >
     <template #title>
       Powering Industry,
