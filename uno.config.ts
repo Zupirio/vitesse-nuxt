@@ -17,6 +17,13 @@ export default defineConfig({
     // Products (constants/products.ts)
     'i-carbon-gas-station', 'i-carbon-industry', 'i-carbon-solar-panel',
     'i-carbon-flame', 'i-carbon-flash',
+    // Product color map classes (dynamic bg/text/bgLight in products showcase/pages)
+    'bg-jetspan-yellow', 'text-jetspan-black', 'bg-jetspan-yellow/20',
+    'bg-jetspan-green', 'text-white', 'bg-jetspan-green/20',
+    'bg-jetspan-blue', 'bg-jetspan-blue/20',
+    'bg-jetspan-teal', 'bg-jetspan-teal/20',
+    'bg-jetspan-amber', 'bg-jetspan-amber/20',
+    'bg-jetspan-orange', 'bg-jetspan-orange/20',
     // Solar (LingoDecoder, CaseStudy)
     'i-carbon-settings-adjust', 'i-carbon-battery-full', 'i-carbon-meter',
     'i-carbon-plug', 'i-carbon-warning', 'i-carbon-warning-alt',
