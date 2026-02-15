@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { companyInfo } from '~/constants'
-
 definePageMeta({
   layout: 'default',
 })
@@ -76,30 +74,32 @@ const colorPalettes = [
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-white via-brand-light to-brand-gray-50">
+  <div class="min-h-screen from-white to-brand-gray-50 via-brand-light bg-gradient-to-br">
     <!-- Hero Section with New Colors -->
     <div class="section-container section-padding">
-      <div class="text-center mb-16">
-        <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-brand-yellow-600 via-brand-orange-500 to-brand-blue-600 bg-clip-text text-transparent">
+      <div class="mb-16 text-center">
+        <h1 class="text-5xl text-transparent font-bold mb-6 from-brand-yellow-600 to-brand-blue-600 via-brand-orange-500 bg-gradient-to-r bg-clip-text">
           Enhanced Color Palette
         </h1>
-        <p class="text-xl text-brand-gray-600 max-w-3xl mx-auto">
+        <p class="text-xl text-brand-gray-600 mx-auto max-w-3xl">
           Visual preview of how the new colors enhance Jetspan's brand presence
         </p>
       </div>
 
       <!-- Color Palette Swatches -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold mb-8 text-center text-brand-gray-800">
+        <h2 class="text-3xl text-brand-gray-800 font-bold mb-8 text-center">
           Complete Color System
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="gap-6 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
           <div v-for="palette in colorPalettes" :key="palette.key" class="card">
             <h3 class="text-xl font-semibold mb-2" :class="`text-brand-${palette.key}-600`">
               {{ palette.name }}
-              <span v-if="palette.desc.includes('NEW')" class="text-xs bg-brand-orange-100 text-brand-orange-700 px-2 py-1 rounded-full ml-2">NEW</span>
+              <span v-if="palette.desc.includes('NEW')" class="text-xs text-brand-orange-700 ml-2 px-2 py-1 rounded-full bg-brand-orange-100">NEW</span>
             </h3>
-            <p class="text-sm text-brand-gray-600 mb-4">{{ palette.desc }}</p>
+            <p class="text-sm text-brand-gray-600 mb-4">
+              {{ palette.desc }}
+            </p>
             <div class="flex gap-1">
               <div
                 v-for="shade in [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]"
@@ -114,10 +114,10 @@ const colorPalettes = [
 
       <!-- Product Cards with Color Accents -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold mb-8 text-center text-brand-gray-800">
+        <h2 class="text-3xl text-brand-gray-800 font-bold mb-8 text-center">
           Product Cards with Color Identity
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="gap-6 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2">
           <div
             v-for="product in products"
             :key="product.title"
@@ -142,22 +142,22 @@ const colorPalettes = [
 
       <!-- Feature Grid with Icons -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold mb-8 text-center text-brand-gray-800">
+        <h2 class="text-3xl text-brand-gray-800 font-bold mb-8 text-center">
           Features with Color-Coded Icons
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="gap-6 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2">
           <div
             v-for="feature in features"
             :key="feature.title"
-            class="text-center p-8 rounded-xl bg-white hover:shadow-xl transition-all duration-300"
+            class="p-8 text-center rounded-xl bg-white transition-all duration-300 hover:shadow-xl"
           >
             <div :class="`inline-flex p-4 rounded-full bg-brand-${feature.color}-100 text-brand-${feature.color}-600 mb-4`">
               <div :class="`${feature.icon} text-3xl`" />
             </div>
-            <h3 class="text-lg font-semibold mb-2 text-brand-gray-800">
+            <h3 class="text-lg text-brand-gray-800 font-semibold mb-2">
               {{ feature.title }}
             </h3>
-            <p class="text-brand-gray-600 text-sm">
+            <p class="text-sm text-brand-gray-600">
               {{ feature.description }}
             </p>
           </div>
@@ -166,13 +166,13 @@ const colorPalettes = [
 
       <!-- Button Variations -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold mb-8 text-center text-brand-gray-800">
+        <h2 class="text-3xl text-brand-gray-800 font-bold mb-8 text-center">
           Button Variations
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="gap-8 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
           <!-- Existing Buttons -->
           <div class="card text-center">
-            <h3 class="font-semibold mb-4 text-brand-gray-700">
+            <h3 class="text-brand-gray-700 font-semibold mb-4">
               Current Buttons
             </h3>
             <div class="space-y-3">
@@ -190,18 +190,18 @@ const colorPalettes = [
 
           <!-- New Color Buttons -->
           <div class="card text-center">
-            <h3 class="font-semibold mb-4 text-brand-gray-700 flex items-center justify-center gap-2">
+            <h3 class="text-brand-gray-700 font-semibold mb-4 flex gap-2 items-center justify-center">
               New Options
-              <span class="text-xs bg-brand-orange-100 text-brand-orange-700 px-2 py-1 rounded-full">NEW</span>
+              <span class="text-xs text-brand-orange-700 px-2 py-1 rounded-full bg-brand-orange-100">NEW</span>
             </h3>
             <div class="space-y-3">
-              <button class="px-6 py-3 rounded-lg w-full bg-brand-blue-500 text-white font-semibold hover:bg-brand-blue-600 transition-colors">
+              <button class="text-white font-semibold px-6 py-3 rounded-lg bg-brand-blue-500 w-full transition-colors hover:bg-brand-blue-600">
                 Trust & Info (Blue)
               </button>
-              <button class="px-6 py-3 rounded-lg w-full bg-brand-orange-500 text-white font-semibold hover:bg-brand-orange-600 transition-colors">
+              <button class="text-white font-semibold px-6 py-3 rounded-lg bg-brand-orange-500 w-full transition-colors hover:bg-brand-orange-600">
                 Energy & Action (Orange)
               </button>
-              <button class="px-6 py-3 rounded-lg w-full bg-brand-teal-500 text-white font-semibold hover:bg-brand-teal-600 transition-colors">
+              <button class="text-white font-semibold px-6 py-3 rounded-lg bg-brand-teal-500 w-full transition-colors hover:bg-brand-teal-600">
                 Modern & Tech (Teal)
               </button>
             </div>
@@ -209,17 +209,17 @@ const colorPalettes = [
 
           <!-- Subtle Accent Buttons -->
           <div class="card text-center">
-            <h3 class="font-semibold mb-4 text-brand-gray-700">
+            <h3 class="text-brand-gray-700 font-semibold mb-4">
               Subtle Accents
             </h3>
             <div class="space-y-3">
-              <button class="px-6 py-3 rounded-lg w-full border-2 border-brand-blue-500 text-brand-blue-600 font-semibold hover:bg-brand-blue-50 transition-colors">
+              <button class="text-brand-blue-600 font-semibold px-6 py-3 border-2 border-brand-blue-500 rounded-lg w-full transition-colors hover:bg-brand-blue-50">
                 Blue Outline
               </button>
-              <button class="px-6 py-3 rounded-lg w-full bg-brand-amber-50 text-brand-amber-700 font-semibold hover:bg-brand-amber-100 transition-colors">
+              <button class="text-brand-amber-700 font-semibold px-6 py-3 rounded-lg bg-brand-amber-50 w-full transition-colors hover:bg-brand-amber-100">
                 Premium (Amber)
               </button>
-              <button class="px-6 py-3 rounded-lg w-full bg-brand-navy-800 text-white font-semibold hover:bg-brand-navy-900 transition-colors">
+              <button class="text-white font-semibold px-6 py-3 rounded-lg bg-brand-navy-800 w-full transition-colors hover:bg-brand-navy-900">
                 Authority (Navy)
               </button>
             </div>
@@ -229,16 +229,16 @@ const colorPalettes = [
 
       <!-- Alert/Badge Variations -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold mb-8 text-center text-brand-gray-800">
+        <h2 class="text-3xl text-brand-gray-800 font-bold mb-8 text-center">
           Alerts & Badges
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="gap-6 grid grid-cols-1 md:grid-cols-2">
           <div class="space-y-4">
-            <div class="p-4 rounded-lg border-l-4 border-brand-blue-500 bg-brand-blue-50">
-              <div class="flex items-start gap-3">
-                <div class="i-carbon-information text-2xl text-brand-blue-600 flex-shrink-0 mt-0.5" />
+            <div class="p-4 border-l-4 border-brand-blue-500 rounded-lg bg-brand-blue-50">
+              <div class="flex gap-3 items-start">
+                <div class="i-carbon-information text-2xl text-brand-blue-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h4 class="font-semibold text-brand-blue-800 mb-1">
+                  <h4 class="text-brand-blue-800 font-semibold mb-1">
                     Information
                   </h4>
                   <p class="text-sm text-brand-blue-700">
@@ -248,11 +248,11 @@ const colorPalettes = [
               </div>
             </div>
 
-            <div class="p-4 rounded-lg border-l-4 border-brand-teal-500 bg-brand-teal-50">
-              <div class="flex items-start gap-3">
-                <div class="i-carbon-checkmark-filled text-2xl text-brand-teal-600 flex-shrink-0 mt-0.5" />
+            <div class="p-4 border-l-4 border-brand-teal-500 rounded-lg bg-brand-teal-50">
+              <div class="flex gap-3 items-start">
+                <div class="i-carbon-checkmark-filled text-2xl text-brand-teal-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h4 class="font-semibold text-brand-teal-800 mb-1">
+                  <h4 class="text-brand-teal-800 font-semibold mb-1">
                     Success
                   </h4>
                   <p class="text-sm text-brand-teal-700">
@@ -262,11 +262,11 @@ const colorPalettes = [
               </div>
             </div>
 
-            <div class="p-4 rounded-lg border-l-4 border-brand-orange-500 bg-brand-orange-50">
-              <div class="flex items-start gap-3">
-                <div class="i-carbon-warning text-2xl text-brand-orange-600 flex-shrink-0 mt-0.5" />
+            <div class="p-4 border-l-4 border-brand-orange-500 rounded-lg bg-brand-orange-50">
+              <div class="flex gap-3 items-start">
+                <div class="i-carbon-warning text-2xl text-brand-orange-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h4 class="font-semibold text-brand-orange-800 mb-1">
+                  <h4 class="text-brand-orange-800 font-semibold mb-1">
                     Warning
                   </h4>
                   <p class="text-sm text-brand-orange-700">
@@ -279,29 +279,29 @@ const colorPalettes = [
 
           <div class="space-y-4">
             <div class="card">
-              <h4 class="font-semibold mb-4 text-brand-gray-700">
+              <h4 class="text-brand-gray-700 font-semibold mb-4">
                 Status Badges
               </h4>
               <div class="flex flex-wrap gap-3">
-                <span class="px-3 py-1 rounded-full bg-brand-blue-100 text-brand-blue-700 text-sm font-medium">In Stock</span>
-                <span class="px-3 py-1 rounded-full bg-brand-teal-100 text-brand-teal-700 text-sm font-medium">Available</span>
-                <span class="px-3 py-1 rounded-full bg-brand-orange-100 text-brand-orange-700 text-sm font-medium">Hot Deal</span>
-                <span class="px-3 py-1 rounded-full bg-brand-amber-100 text-brand-amber-700 text-sm font-medium">Premium</span>
-                <span class="px-3 py-1 rounded-full bg-brand-green-100 text-brand-green-700 text-sm font-medium">Eco-Friendly</span>
-                <span class="px-3 py-1 rounded-full bg-brand-yellow-100 text-brand-yellow-800 text-sm font-medium">Fast Delivery</span>
+                <span class="text-sm text-brand-blue-700 font-medium px-3 py-1 rounded-full bg-brand-blue-100">In Stock</span>
+                <span class="text-sm text-brand-teal-700 font-medium px-3 py-1 rounded-full bg-brand-teal-100">Available</span>
+                <span class="text-sm text-brand-orange-700 font-medium px-3 py-1 rounded-full bg-brand-orange-100">Hot Deal</span>
+                <span class="text-sm text-brand-amber-700 font-medium px-3 py-1 rounded-full bg-brand-amber-100">Premium</span>
+                <span class="text-sm text-brand-green-700 font-medium px-3 py-1 rounded-full bg-brand-green-100">Eco-Friendly</span>
+                <span class="text-sm text-brand-yellow-800 font-medium px-3 py-1 rounded-full bg-brand-yellow-100">Fast Delivery</span>
               </div>
             </div>
 
             <div class="card">
-              <h4 class="font-semibold mb-4 text-brand-gray-700">
+              <h4 class="text-brand-gray-700 font-semibold mb-4">
                 Category Tags
               </h4>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-md bg-brand-blue-600 text-white text-xs font-semibold">Petroleum</span>
-                <span class="px-3 py-1.5 rounded-md bg-brand-orange-600 text-white text-xs font-semibold">Oil Products</span>
-                <span class="px-3 py-1.5 rounded-md bg-brand-teal-600 text-white text-xs font-semibold">Solar</span>
-                <span class="px-3 py-1.5 rounded-md bg-brand-green-600 text-white text-xs font-semibold">Renewable</span>
-                <span class="px-3 py-1.5 rounded-md bg-brand-amber-600 text-white text-xs font-semibold">Premium</span>
+                <span class="text-xs text-white font-semibold px-3 py-1.5 rounded-md bg-brand-blue-600">Petroleum</span>
+                <span class="text-xs text-white font-semibold px-3 py-1.5 rounded-md bg-brand-orange-600">Oil Products</span>
+                <span class="text-xs text-white font-semibold px-3 py-1.5 rounded-md bg-brand-teal-600">Solar</span>
+                <span class="text-xs text-white font-semibold px-3 py-1.5 rounded-md bg-brand-green-600">Renewable</span>
+                <span class="text-xs text-white font-semibold px-3 py-1.5 rounded-md bg-brand-amber-600">Premium</span>
               </div>
             </div>
           </div>
@@ -310,36 +310,36 @@ const colorPalettes = [
 
       <!-- Stats Section -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold mb-8 text-center text-brand-gray-800">
+        <h2 class="text-3xl text-brand-gray-800 font-bold mb-8 text-center">
           Statistics with Color Coding
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div class="card text-center bg-gradient-to-br from-brand-blue-50 to-white">
-            <div class="text-4xl font-bold text-brand-blue-600 mb-2">
+        <div class="gap-6 grid grid-cols-1 md:grid-cols-4">
+          <div class="card text-center from-brand-blue-50 to-white bg-gradient-to-br">
+            <div class="text-4xl text-brand-blue-600 font-bold mb-2">
               1000+
             </div>
             <div class="text-brand-blue-800 font-semibold">
               Clients Served
             </div>
           </div>
-          <div class="card text-center bg-gradient-to-br from-brand-orange-50 to-white">
-            <div class="text-4xl font-bold text-brand-orange-600 mb-2">
+          <div class="card text-center from-brand-orange-50 to-white bg-gradient-to-br">
+            <div class="text-4xl text-brand-orange-600 font-bold mb-2">
               24/7
             </div>
             <div class="text-brand-orange-800 font-semibold">
               Support Available
             </div>
           </div>
-          <div class="card text-center bg-gradient-to-br from-brand-teal-50 to-white">
-            <div class="text-4xl font-bold text-brand-teal-600 mb-2">
+          <div class="card text-center from-brand-teal-50 to-white bg-gradient-to-br">
+            <div class="text-4xl text-brand-teal-600 font-bold mb-2">
               100%
             </div>
             <div class="text-brand-teal-800 font-semibold">
               Quality Assured
             </div>
           </div>
-          <div class="card text-center bg-gradient-to-br from-brand-amber-50 to-white">
-            <div class="text-4xl font-bold text-brand-amber-600 mb-2">
+          <div class="card text-center from-brand-amber-50 to-white bg-gradient-to-br">
+            <div class="text-4xl text-brand-amber-600 font-bold mb-2">
               25+
             </div>
             <div class="text-brand-amber-800 font-semibold">
@@ -351,22 +351,22 @@ const colorPalettes = [
 
       <!-- CTA Section -->
       <div class="text-center">
-        <div class="inline-block p-1 rounded-2xl bg-gradient-to-r from-brand-blue-500 via-brand-teal-500 to-brand-orange-500">
-          <div class="bg-white rounded-xl p-12">
-            <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-brand-blue-600 via-brand-teal-600 to-brand-orange-600 bg-clip-text text-transparent">
+        <div class="p-1 rounded-2xl inline-block from-brand-blue-500 to-brand-orange-500 via-brand-teal-500 bg-gradient-to-r">
+          <div class="p-12 rounded-xl bg-white">
+            <h2 class="text-4xl text-transparent font-bold mb-6 from-brand-blue-600 to-brand-orange-600 via-brand-teal-600 bg-gradient-to-r bg-clip-text">
               Ready to Experience the Difference?
             </h2>
-            <p class="text-xl text-brand-gray-600 mb-8 max-w-2xl mx-auto">
+            <p class="text-xl text-brand-gray-600 mx-auto mb-8 max-w-2xl">
               Contact us today for premium petroleum products and sustainable energy solutions
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
               <button class="btn">
                 Get Started
               </button>
-              <button class="px-6 py-3 rounded-lg bg-brand-blue-500 text-white font-semibold hover:bg-brand-blue-600 transition-colors">
+              <button class="text-white font-semibold px-6 py-3 rounded-lg bg-brand-blue-500 transition-colors hover:bg-brand-blue-600">
                 Learn More
               </button>
-              <button class="px-6 py-3 rounded-lg border-2 border-brand-teal-500 text-brand-teal-600 font-semibold hover:bg-brand-teal-50 transition-colors">
+              <button class="text-brand-teal-600 font-semibold px-6 py-3 border-2 border-brand-teal-500 rounded-lg transition-colors hover:bg-brand-teal-50">
                 View Products
               </button>
             </div>

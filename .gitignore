@@ -6,4 +6,10 @@ dist
 .nuxt
 .env
 .idea/
+.github/
 public/assets/fonts
+.htaccess
+*.sh
+*.md
+deployment.zip
+deployment/

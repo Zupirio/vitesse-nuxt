@@ -1,8 +1,18 @@
 <script setup lang="ts">
-import { appName } from '~/constants'
+import { appDescription, appName } from '~/constants'
 
 useHead({
   title: appName,
+  meta: [
+    { name: 'description', content: appDescription },
+  ],
+})
+
+useSeoMeta({
+  ogTitle: appName,
+  ogDescription: appDescription,
+  ogType: 'website',
+  ogUrl: 'https://jetspan.co.za',
 })
 </script>
 
@@ -11,6 +21,8 @@ useHead({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <WhatsAppButton />
+  <LeadCaptureModal />
 </template>
 
 <style>

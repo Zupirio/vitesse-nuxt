@@ -12,13 +12,25 @@ import {
 
 export default defineConfig({
   shortcuts: [
+    // Buttons
     ['btn', 'px-6 py-3 rounded-lg inline-block bg-jetspan-yellow text-jetspan-black font-semibold cursor-pointer hover:bg-yellow-400 disabled:cursor-default disabled:bg-gray-400 disabled:opacity-50 transition-all duration-200'],
+    ['btn-primary', 'px-6 py-3 rounded-lg inline-block bg-jetspan-yellow text-jetspan-black font-semibold cursor-pointer hover:bg-yellow-400 disabled:cursor-default disabled:bg-gray-400 disabled:opacity-50 transition-all duration-200'],
     ['btn-secondary', 'px-6 py-3 rounded-lg inline-block bg-jetspan-green text-white font-semibold cursor-pointer hover:bg-green-600 disabled:cursor-default disabled:bg-gray-400 disabled:opacity-50 transition-all duration-200'],
     ['btn-outline', 'px-6 py-3 rounded-lg inline-block border-2 border-jetspan-yellow text-jetspan-yellow font-semibold cursor-pointer hover:bg-jetspan-yellow hover:text-jetspan-black transition-all duration-200'],
+    ['btn-outline-white', 'px-6 py-3 rounded-lg inline-block border-2 border-white text-white font-semibold cursor-pointer hover:bg-white hover:text-jetspan-black transition-all duration-200'],
+    ['btn-whatsapp', 'px-6 py-3 rounded-lg inline-block bg-green-500 text-white font-semibold cursor-pointer hover:bg-green-600 transition-all duration-200'],
     ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-jetspan-yellow'],
+    // Cards & Layout
     ['card', 'bg-white dark:bg-jetspan-gray-dark rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'],
     ['section-container', 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'],
-    ['section-padding', 'py-16 md:py-24'],
+    ['section-padding', 'py-20 md:py-32'],
+    // Typography — "Industrial Art" visual language
+    ['heading-display', 'font-dm-serif-display'],
+    ['section-title', 'text-4xl font-bold mb-4 md:text-5xl text-jetspan-black dark:text-white font-dm-serif-display'],
+    ['section-subtitle', 'text-xl text-jetspan-gray mx-auto max-w-3xl dark:text-gray-400'],
+    // Hero pattern
+    ['hero-gradient', 'from-jetspan-black to-jetspan-gray-dark bg-gradient-to-br'],
+    ['hero-overlay', 'absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30'],
   ],
   presets: [
     presetWind4(),
@@ -42,13 +54,19 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      // Legacy color names for backward compatibility
+      // Core brand tokens (use these everywhere)
       'jetspan-yellow': '#FBE900',
       'jetspan-green': '#61A641',
       'jetspan-gray': '#5D6973',
       'jetspan-light': '#F2F2F2',
       'jetspan-black': '#0D0D0D',
       'jetspan-gray-dark': '#2D3339',
+      // Aliases for EN590 page and extended palette usage
+      'jetspan-navy': '#1E3A8A',
+      'jetspan-blue': '#2563EB',
+      'jetspan-amber': '#F59E0B',
+      'jetspan-teal': '#14B8A6',
+      'jetspan-orange': '#F97316',
       // Brand color palette
       'brand': {
         yellow: {

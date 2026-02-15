@@ -5,14 +5,16 @@ const currentYear = new Date().getFullYear()
 
 const navigation = {
   products: [
-    { name: 'Diesel', path: '/products#diesel-ulsd' },
+    { name: 'Diesel (EN590)', path: '/en590-diesel' },
     { name: 'Oil Products', path: '/products#crude-oil' },
     { name: 'Petroleum Products', path: '/products#petroleum-products' },
-    { name: 'Solar Solutions', path: '/products#solar-solutions' },
+    { name: 'Solar Solutions', path: '/solar-solutions' },
+    { name: 'Gas (LPG)', path: '/gas-lpg' },
   ],
   company: [
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Our Story', path: '/about' },
+    { name: 'All Products', path: '/products' },
+    { name: 'Request a Quote', path: '/contact' },
   ],
 }
 </script>
@@ -24,8 +26,16 @@ const navigation = {
         <!-- Company Info -->
         <div class="lg:col-span-2">
           <div class="mb-4 flex items-center space-x-3">
-            <div class="text-xl text-jetspan-black font-bold rounded-lg bg-jetspan-yellow flex h-10 w-10 items-center justify-center">
-              J
+            <div
+              class="bg-jetspan-white text-xl text-jetspan-black font-bold rounded-lg flex h-10 w-10 items-center justify-center"
+            >
+              <NuxtImg
+                src="/assets/logos/jetspan-logo.png"
+                alt="Jetspan Logo"
+                class="h-12 w-auto transition-transform group-hover:scale-110"
+                width="48"
+                height="48"
+              />
             </div>
             <span class="text-2xl text-white font-bold">
               {{ companyInfo.name }}
@@ -35,13 +45,26 @@ const navigation = {
             {{ companyInfo.description }}
           </p>
           <div class="space-y-2">
-            <a :href="`mailto:${companyInfo.email}`" class="text-gray-400 flex transition-colors items-center space-x-2 hover:text-jetspan-yellow">
+            <a
+              :href="`mailto:${companyInfo.email}`"
+              class="text-gray-400 flex transition-colors items-center space-x-2 hover:text-jetspan-yellow"
+            >
               <div class="i-carbon-email" />
               <span>{{ companyInfo.email }}</span>
             </a>
-            <a :href="`tel:${companyInfo.phone}`" class="text-gray-400 flex transition-colors items-center space-x-2 hover:text-jetspan-yellow">
+            <a
+              :href="`tel:${companyInfo.phone}`"
+              class="text-gray-400 flex transition-colors items-center space-x-2 hover:text-jetspan-yellow"
+            >
               <div class="i-carbon-phone" />
               <span>{{ companyInfo.phone }}</span>
+            </a>
+            <a
+              :href="`tel:${companyInfo.phone}`"
+              class="text-gray-400 flex transition-colors items-center space-x-2 hover:text-jetspan-yellow"
+            >
+              <div class="i-mdi-whatsapp" />
+              <span>{{ companyInfo.whatsapp }}</span>
             </a>
           </div>
         </div>
@@ -75,8 +98,27 @@ const navigation = {
         </div>
       </div>
 
+      <!-- Quick Quote Banner -->
+      <div class="mb-12 flex flex-col items-center justify-between gap-4 rounded-xl border border-jetspan-yellow/20 bg-jetspan-yellow/5 p-6 sm:flex-row">
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1">Need a Quick Quote?</h3>
+          <p class="text-sm text-gray-400">Get pricing for diesel, solar, or gas via WhatsApp — fast, direct, no hassle.</p>
+        </div>
+        <a
+          :href="`https://wa.me/${companyInfo.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi Jetspan, I\'d like to request a quote.')}`"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-whatsapp inline-flex flex-shrink-0 items-center gap-2 text-sm"
+        >
+          <div class="i-mdi-whatsapp text-xl" />
+          WhatsApp Us
+        </a>
+      </div>
+
       <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-jetspan-gray flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+      <div
+        class="pt-8 border-t border-jetspan-gray flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0"
+      >
         <p class="text-sm text-gray-400">
           © {{ currentYear }} {{ companyInfo.name }}. All rights reserved.
         </p>

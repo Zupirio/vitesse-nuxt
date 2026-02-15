@@ -5,6 +5,13 @@ definePageMeta({
   layout: 'default',
 })
 
+useSeoMeta({
+  title: 'Contact Us | Jetspan',
+  ogTitle: 'Get in Touch with Jetspan',
+  description: 'Ready to discuss your energy requirements? Contact Jetspan for diesel, solar, gas and petroleum solutions.',
+  ogDescription: 'Reach out to Jetspan for quotes, enquiries and support — email, phone, or WhatsApp.',
+})
+
 const form = ref({
   name: '',
   company: '',
@@ -17,19 +24,35 @@ const form = ref({
 const submitted = ref(false)
 
 const products = [
-  'Diesel',
-  'Oil Products',
+  'EN590 Diesel',
+  'Crude Oil',
   'Petroleum Products',
   'Solar Solutions',
+  'Gas (LPG)',
   'Other',
 ]
 
 function handleSubmit() {
-  // In a real application, you would send this data to a backend
-  // For now, we'll just show a success message
+  // Build mailto body with form data
+  const subject = `RFQ from ${form.value.name} — ${form.value.product}`
+  const body = [
+    `Name: ${form.value.name}`,
+    `Company: ${form.value.company}`,
+    `Email: ${form.value.email}`,
+    `Phone: ${form.value.phone || 'N/A'}`,
+    `Product: ${form.value.product}`,
+    '',
+    `Message:`,
+    form.value.message,
+  ].join('\n')
+
+  window.open(
+    `mailto:${companyInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+    '_self',
+  )
+
   submitted.value = true
 
-  // Reset form after 3 seconds
   setTimeout(() => {
     form.value = {
       name: '',
@@ -62,30 +85,25 @@ const contactMethods = [
     value: companyInfo.whatsapp,
     link: `https://wa.me/${companyInfo.whatsapp.replace(/\D/g, '')}`,
   },
-  {
-    icon: 'i-carbon-location',
-    title: 'Visit Us',
-    value: companyInfo.address,
-    link: '#',
-  },
+  // {
+  //   icon: 'i-carbon-location',
+  //   title: 'Visit Us',
+  //   value: companyInfo.address,
+  //   link: '#',
+  // },
 ]
 </script>
 
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="section-padding from-jetspan-black to-jetspan-gray bg-gradient-to-br">
-      <div class="section-container">
-        <div class="max-w-3xl">
-          <h1 class="text-5xl text-white font-bold mb-6 md:text-6xl">
-            Get in Touch
-          </h1>
-          <p class="text-xl text-gray-300">
-            Ready to discuss your energy requirements? Our team is here to help you find the perfect solution for your business needs.
-          </p>
-        </div>
-      </div>
-    </section>
+    <SectionHero
+      title="Get in Touch"
+      subtitle="Ready to discuss your energy requirements? Our team is here to help you find the perfect solution for your business needs."
+      badge="Let's Talk"
+      badge-icon="i-carbon-chat"
+      compact
+    />
 
     <!-- Contact Content -->
     <section class="section-padding bg-jetspan-light dark:bg-jetspan-black">
@@ -93,7 +111,7 @@ const contactMethods = [
         <div class="gap-12 grid lg:grid-cols-2">
           <!-- Contact Form -->
           <div class="card">
-            <h2 class="text-3xl text-jetspan-black font-bold mb-6 dark:text-white">
+            <h2 class="heading-display text-3xl text-jetspan-black mb-6 dark:text-white">
               Send Us a Message
             </h2>
 
@@ -188,14 +206,15 @@ const contactMethods = [
                 />
               </div>
 
-              <button type="submit" class="btn w-full">
+              <button type="submit" class="btn-primary w-full">
+                <span class="i-carbon-send mr-2 inline-block" />
                 Send Message
               </button>
             </form>
 
             <div v-else class="py-12 text-center">
               <div class="i-carbon-checkmark-filled text-6xl text-jetspan-green mx-auto mb-4" />
-              <h3 class="text-2xl text-jetspan-black font-bold mb-2 dark:text-white">
+              <h3 class="heading-display text-2xl text-jetspan-black mb-2 dark:text-white">
                 Message Sent!
               </h3>
               <p class="text-jetspan-gray dark:text-gray-400">
@@ -207,7 +226,7 @@ const contactMethods = [
           <!-- Contact Information -->
           <div class="space-y-8">
             <div class="card">
-              <h3 class="text-2xl text-jetspan-black font-bold mb-6 dark:text-white">
+              <h3 class="heading-display text-2xl text-jetspan-black mb-6 dark:text-white">
                 Contact Information
               </h3>
               <div class="space-y-6">
@@ -235,7 +254,7 @@ const contactMethods = [
             </div>
 
             <div class="card">
-              <h3 class="text-2xl text-jetspan-black font-bold mb-4 dark:text-white">
+              <h3 class="heading-display text-2xl text-jetspan-black mb-4 dark:text-white">
                 Business Hours
               </h3>
               <div class="space-y-3">

@@ -1,11 +1,20 @@
 <script setup lang="ts">
+import { teamMembers } from '~/constants/team'
+
 definePageMeta({
   layout: 'default',
 })
 
+useSeoMeta({
+  title: 'About Us | Jetspan',
+  ogTitle: 'About Jetspan — Powering Industrial Growth',
+  description: 'Learn about Jetspan — your trusted partner in energy solutions, dedicated to powering industrial growth across South Africa.',
+  ogDescription: 'Jetspan’s story, values, and the team behind quality diesel, solar, and gas solutions for South African industry.',
+})
+
 const values = [
   {
-    icon: 'i-carbon-integrity',
+    icon: 'i-carbon-scis-transparent-supply',
     title: 'Integrity',
     description: 'We conduct business with the highest ethical standards and transparency.',
   },
@@ -25,48 +34,24 @@ const values = [
     description: 'We build long-term relationships based on trust and mutual success.',
   },
 ]
-
-const team = [
-  {
-    role: 'Leadership Team',
-    description: 'Experienced executives with deep industry knowledge and strategic vision.',
-  },
-  {
-    role: 'Technical Experts',
-    description: 'Qualified engineers and technical specialists ensuring product quality.',
-  },
-  {
-    role: 'Account Managers',
-    description: 'Dedicated professionals managing client relationships and requirements.',
-  },
-  {
-    role: 'Logistics Team',
-    description: 'Efficient supply chain experts ensuring reliable delivery.',
-  },
-]
 </script>
 
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="section-padding from-jetspan-black to-jetspan-gray bg-gradient-to-br">
-      <div class="section-container">
-        <div class="max-w-3xl">
-          <h1 class="text-5xl text-white font-bold mb-6 md:text-6xl">
-            About Jetspan
-          </h1>
-          <p class="text-xl text-gray-300">
-            Your trusted partner in energy solutions, dedicated to powering industrial growth across South Africa.
-          </p>
-        </div>
-      </div>
-    </section>
+    <SectionHero
+      title="About Jetspan"
+      subtitle="Your trusted partner in energy solutions, dedicated to powering industrial growth across South Africa."
+      badge="Our Story"
+      badge-icon="i-carbon-enterprise"
+      compact
+    />
 
     <!-- Company Story -->
     <section class="section-padding bg-white dark:bg-jetspan-gray-dark">
       <div class="section-container">
         <div class="mx-auto max-w-4xl">
-          <h2 class="text-4xl text-jetspan-black font-bold mb-6 dark:text-white">
+          <h2 class="heading-display text-4xl text-jetspan-black mb-6 dark:text-white">
             Our Story
           </h2>
           <div class="max-w-none prose prose-lg dark:prose-invert">
@@ -88,10 +73,10 @@ const team = [
     <section class="section-padding bg-jetspan-light dark:bg-jetspan-black">
       <div class="section-container">
         <div class="mb-16 text-center">
-          <h2 class="text-4xl text-jetspan-black font-bold mb-4 md:text-5xl dark:text-white">
+          <h2 class="section-title">
             Our Core Values
           </h2>
-          <p class="text-xl text-jetspan-gray mx-auto max-w-3xl dark:text-gray-400">
+          <p class="section-subtitle">
             The principles that guide everything we do
           </p>
         </div>
@@ -120,27 +105,20 @@ const team = [
     <section class="section-padding bg-white dark:bg-jetspan-gray-dark">
       <div class="section-container">
         <div class="mb-16 text-center">
-          <h2 class="text-4xl text-jetspan-black font-bold mb-4 md:text-5xl dark:text-white">
-            Our Team
+          <h2 class="section-title">
+            Meet Our Team
           </h2>
-          <p class="text-xl text-jetspan-gray mx-auto max-w-3xl dark:text-gray-400">
-            Expert professionals dedicated to your success
+          <p class="section-subtitle">
+            The dedicated professionals driving Jetspan’s success
           </p>
         </div>
 
-        <div class="mx-auto gap-8 grid grid-cols-1 max-w-4xl md:grid-cols-2">
-          <div
-            v-for="(member, index) in team"
-            :key="index"
-            class="card"
-          >
-            <h3 class="text-2xl text-jetspan-black font-bold mb-3 dark:text-white">
-              {{ member.role }}
-            </h3>
-            <p class="text-jetspan-gray dark:text-gray-400">
-              {{ member.description }}
-            </p>
-          </div>
+        <div class="mx-auto gap-8 grid grid-cols-1 max-w-6xl lg:grid-cols-3 sm:grid-cols-2">
+          <TeamMember
+            v-for="member in teamMembers"
+            :key="member.id"
+            :member="member"
+          />
         </div>
       </div>
     </section>
@@ -149,13 +127,13 @@ const team = [
     <section class="section-padding bg-jetspan-light dark:bg-jetspan-black">
       <div class="section-container">
         <div class="mx-auto text-center max-w-4xl">
-          <h2 class="text-4xl text-jetspan-black font-bold mb-6 md:text-5xl dark:text-white">
+          <h2 class="section-title">
             Certifications & Compliance
           </h2>
-          <p class="text-xl text-jetspan-gray mb-8 dark:text-gray-400">
+          <p class="section-subtitle mb-8">
             We adhere to the highest industry standards and maintain all necessary certifications to ensure quality, safety, and environmental compliance.
           </p>
-          <div class="gap-4 grid grid-cols-2 md:grid-cols-4">
+          <div class="mb-8 gap-4 grid grid-cols-2 md:grid-cols-4">
             <div class="card">
               <div class="i-carbon-certificate text-4xl text-jetspan-green mx-auto mb-2" />
               <p class="text-sm text-jetspan-gray font-semibold dark:text-gray-400">
@@ -181,6 +159,15 @@ const team = [
               </p>
             </div>
           </div>
+
+          <!-- Documents -->
+          <!-- <DocumentViewer
+            title="Official License Certificate"
+            description="View our official licensing documentation and compliance certificates"
+            document-url="/assets/documents/license-certificate.pdf"
+            icon-class="i-carbon-document"
+            icon-color="text-jetspan-yellow"
+          /> -->
         </div>
       </div>
     </section>

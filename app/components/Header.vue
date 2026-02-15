@@ -6,9 +6,11 @@ const mobileMenuOpen = ref(false)
 
 const navigation = [
   { name: 'Home', path: '/' },
-  { name: 'Products & Services', path: '/products' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Explore Solutions', path: '/products' },
+  { name: 'Order Diesel', path: '/en590-diesel' },
+  { name: 'Go Solar', path: '/solar-solutions' },
+  { name: 'Get Gas', path: '/gas-lpg' },
+  { name: 'Our Story', path: '/about' },
 ]
 
 function isActive(path: string) {
@@ -22,9 +24,13 @@ function isActive(path: string) {
       <div class="flex h-20 items-center justify-between">
         <!-- Logo -->
         <NuxtLink to="/" class="group flex items-center space-x-3">
-          <div class="text-xl text-jetspan-black font-bold rounded-lg bg-jetspan-yellow flex h-10 w-10 transition-transform items-center justify-center group-hover:scale-110">
-            J
-          </div>
+          <NuxtImg
+            src="/assets/logos/jetspan-logo.png"
+            alt="Jetspan Logo"
+            class="h-12 w-auto transition-transform group-hover:scale-110"
+            width="48"
+            height="48"
+          />
           <span class="text-2xl text-jetspan-black font-bold dark:text-white">
             {{ companyInfo.name }}
           </span>
@@ -42,6 +48,9 @@ function isActive(path: string) {
               : 'text-jetspan-gray dark:text-gray-300 hover:text-jetspan-green hover:bg-jetspan-green/5'"
           >
             {{ item.name }}
+          </NuxtLink>
+          <NuxtLink to="/contact" class="btn text-sm px-4 py-2">
+            Request a Quote
           </NuxtLink>
           <div class="pl-2">
             <DarkToggle />
@@ -87,4 +96,11 @@ function isActive(path: string) {
       </Transition>
     </nav>
   </header>
+
+  <!-- Mobile Fixed CTA -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white px-4 py-3 md:hidden dark:bg-jetspan-black dark:border-jetspan-gray">
+    <NuxtLink to="/contact" class="btn block w-full text-center text-sm">
+      Request a Quote
+    </NuxtLink>
+  </div>
 </template>

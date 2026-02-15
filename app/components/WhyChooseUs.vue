@@ -37,10 +37,10 @@ const benefits = [
   <section class="section-padding bg-white dark:bg-jetspan-gray-dark">
     <div class="section-container">
       <div class="mb-16 text-center">
-        <h2 class="text-4xl text-jetspan-black font-bold mb-4 md:text-5xl dark:text-white">
+        <h2 class="section-title">
           Why Choose Jetspan?
         </h2>
-        <p class="text-xl text-jetspan-gray mx-auto max-w-3xl dark:text-gray-400">
+        <p class="section-subtitle mt-4">
           Your trusted partner in energy solutions with proven excellence
         </p>
       </div>

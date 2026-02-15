@@ -10,7 +10,7 @@
 
     <div class="section-container relative z-10">
       <div class="mx-auto text-center max-w-4xl">
-        <h2 class="text-4xl text-white font-bold mb-6 md:text-5xl">
+        <h2 class="text-4xl text-white font-bold mb-6 md:text-5xl heading-display">
           Ready to Power Your Business?
         </h2>
         <p class="text-xl text-gray-300 mb-8">
