@@ -13,7 +13,7 @@ const whatsappUrl = computed(() => {
     :href="whatsappUrl"
     target="_blank"
     rel="noopener noreferrer"
-    class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl md:bottom-8 md:right-8"
+    class="fixed bottom-4 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl md:bottom-6 md:right-6"
     aria-label="Chat on WhatsApp"
   >
     <div class="i-mdi-whatsapp text-3xl" />

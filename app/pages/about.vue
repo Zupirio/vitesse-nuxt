@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Product } from '~/constants/products'
+import { productColorMap } from '~/constants/products'
 import { teamMembers } from '~/constants/team'
 
 definePageMeta({
@@ -12,26 +14,30 @@ useSeoMeta({
   ogDescription: 'Jetspan’s story, values, and the team behind quality diesel, solar, and gas solutions for South African industry.',
 })
 
-const values = [
+const values: Array<{ icon: string, title: string, description: string, color: Product['color'] }> = [
   {
     icon: 'i-carbon-scis-transparent-supply',
     title: 'Integrity',
     description: 'We conduct business with the highest ethical standards and transparency.',
+    color: 'blue',
   },
   {
     icon: 'i-carbon-trophy',
     title: 'Excellence',
     description: 'We strive for excellence in every product and service we deliver.',
+    color: 'amber',
   },
   {
     icon: 'i-carbon-earth',
     title: 'Sustainability',
     description: 'We are committed to environmental responsibility and sustainable practices.',
+    color: 'green',
   },
   {
     icon: 'i-carbon-collaborate',
     title: 'Partnership',
     description: 'We build long-term relationships based on trust and mutual success.',
+    color: 'teal',
   },
 ]
 </script>
@@ -88,8 +94,14 @@ const values = [
             :key="index"
             class="group card text-center transition-transform hover:scale-105"
           >
-            <div class="mb-6 rounded-full bg-jetspan-yellow/20 inline-flex h-20 w-20 transition-colors items-center justify-center group-hover:bg-jetspan-yellow">
-              <div :class="value.icon" class="text-4xl text-jetspan-yellow transition-colors group-hover:text-jetspan-black" />
+            <div
+              class="mb-6 rounded-full inline-flex h-20 w-20 transition-colors items-center justify-center"
+              :class="[productColorMap[value.color].bgLight, productColorMap[value.color].hoverBg]"
+            >
+              <div
+                :class="[value.icon, productColorMap[value.color].iconText, productColorMap[value.color].hoverText]"
+                class="text-4xl transition-colors"
+              />
             </div>
             <h3 class="text-xl text-jetspan-black font-bold mb-3 dark:text-white">
               {{ value.title }}

@@ -1,34 +1,43 @@
 <script setup lang="ts">
-const benefits = [
+import { productColorMap } from '~/constants/products'
+import type { Product } from '~/constants/products'
+
+const benefits: Array<{ icon: string, title: string, description: string, color: Product['color'] }> = [
   {
     icon: 'i-carbon-certificate-check',
     title: 'Quality Assured',
     description: 'All our products meet international quality standards and undergo rigorous testing.',
+    color: 'green',
   },
   {
     icon: 'i-carbon-delivery-truck',
     title: 'Reliable Supply',
     description: 'Consistent delivery schedules and dependable supply chain management.',
+    color: 'blue',
   },
   {
     icon: 'i-carbon-user-favorite',
     title: 'Expert Support',
     description: 'Dedicated account managers and technical support team available 24/7.',
+    color: 'amber',
   },
   {
     icon: 'i-carbon-sustainability',
     title: 'Sustainable Solutions',
     description: 'Committed to environmental responsibility and sustainable energy practices.',
+    color: 'teal',
   },
   {
     icon: 'i-carbon-partnership',
     title: 'B2B Expertise',
     description: 'Deep understanding of industrial needs and customized business solutions.',
+    color: 'orange',
   },
   {
     icon: 'i-carbon-chart-line',
     title: 'Competitive Pricing',
     description: 'Best-in-market pricing without compromising on quality or service.',
+    color: 'yellow',
   },
 ]
 </script>
@@ -51,8 +60,14 @@ const benefits = [
           :key="index"
           class="group text-center"
         >
-          <div class="mb-6 rounded-full bg-jetspan-yellow/20 inline-flex h-20 w-20 transition-colors duration-300 items-center justify-center group-hover:bg-jetspan-yellow">
-            <div :class="benefit.icon" class="text-4xl text-jetspan-yellow transition-colors duration-300 group-hover:text-jetspan-black" />
+          <div
+            class="mb-6 rounded-full inline-flex h-20 w-20 transition-colors duration-300 items-center justify-center"
+            :class="[productColorMap[benefit.color].bgLight, productColorMap[benefit.color].hoverBg]"
+          >
+            <div
+              :class="[benefit.icon, productColorMap[benefit.color].iconText, productColorMap[benefit.color].hoverText]"
+              class="text-4xl transition-colors duration-300"
+            />
           </div>
           <h3 class="text-xl text-jetspan-black font-bold mb-3 dark:text-white">
             {{ benefit.title }}

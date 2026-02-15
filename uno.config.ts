@@ -24,6 +24,15 @@ export default defineConfig({
     'bg-jetspan-teal', 'bg-jetspan-teal/20',
     'bg-jetspan-amber', 'bg-jetspan-amber/20',
     'bg-jetspan-orange', 'bg-jetspan-orange/20',
+    // Icon text colors (WhyChooseUs, About values — dynamic :class)
+    'text-jetspan-yellow', 'text-jetspan-green', 'text-jetspan-blue',
+    'text-jetspan-teal', 'text-jetspan-amber', 'text-jetspan-orange',
+    // Group-hover background variants (icon circle hover state)
+    'group-hover:bg-jetspan-yellow', 'group-hover:bg-jetspan-green',
+    'group-hover:bg-jetspan-blue', 'group-hover:bg-jetspan-teal',
+    'group-hover:bg-jetspan-amber', 'group-hover:bg-jetspan-orange',
+    // Group-hover text variants (icon hover text color)
+    'group-hover:text-white', 'group-hover:text-jetspan-black',
     // Solar (LingoDecoder, CaseStudy)
     'i-carbon-settings-adjust', 'i-carbon-battery-full', 'i-carbon-meter',
     'i-carbon-plug', 'i-carbon-warning', 'i-carbon-warning-alt',

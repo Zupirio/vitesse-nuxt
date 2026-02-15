@@ -180,14 +180,22 @@ export const products: Product[] = [
 /**
  * Product color map for dynamic class binding.
  * Maps product color names to UnoCSS utility classes.
+ * Used in ProductsShowcase, WhyChooseUs, and About core values.
  */
-export const productColorMap: Record<Product['color'], { bg: string, text: string, bgLight: string }> = {
-  yellow: { bg: 'bg-jetspan-yellow', text: 'text-jetspan-black', bgLight: 'bg-jetspan-yellow/20' },
-  green: { bg: 'bg-jetspan-green', text: 'text-white', bgLight: 'bg-jetspan-green/20' },
-  blue: { bg: 'bg-jetspan-blue', text: 'text-white', bgLight: 'bg-jetspan-blue/20' },
-  teal: { bg: 'bg-jetspan-teal', text: 'text-white', bgLight: 'bg-jetspan-teal/20' },
-  amber: { bg: 'bg-jetspan-amber', text: 'text-jetspan-black', bgLight: 'bg-jetspan-amber/20' },
-  orange: { bg: 'bg-jetspan-orange', text: 'text-white', bgLight: 'bg-jetspan-orange/20' },
+export const productColorMap: Record<Product['color'], {
+  bg: string
+  text: string
+  bgLight: string
+  iconText: string
+  hoverBg: string
+  hoverText: string
+}> = {
+  yellow: { bg: 'bg-jetspan-yellow', text: 'text-jetspan-black', bgLight: 'bg-jetspan-yellow/20', iconText: 'text-jetspan-yellow', hoverBg: 'group-hover:bg-jetspan-yellow', hoverText: 'group-hover:text-jetspan-black' },
+  green: { bg: 'bg-jetspan-green', text: 'text-white', bgLight: 'bg-jetspan-green/20', iconText: 'text-jetspan-green', hoverBg: 'group-hover:bg-jetspan-green', hoverText: 'group-hover:text-white' },
+  blue: { bg: 'bg-jetspan-blue', text: 'text-white', bgLight: 'bg-jetspan-blue/20', iconText: 'text-jetspan-blue', hoverBg: 'group-hover:bg-jetspan-blue', hoverText: 'group-hover:text-white' },
+  teal: { bg: 'bg-jetspan-teal', text: 'text-white', bgLight: 'bg-jetspan-teal/20', iconText: 'text-jetspan-teal', hoverBg: 'group-hover:bg-jetspan-teal', hoverText: 'group-hover:text-white' },
+  amber: { bg: 'bg-jetspan-amber', text: 'text-jetspan-black', bgLight: 'bg-jetspan-amber/20', iconText: 'text-jetspan-amber', hoverBg: 'group-hover:bg-jetspan-amber', hoverText: 'group-hover:text-jetspan-black' },
+  orange: { bg: 'bg-jetspan-orange', text: 'text-white', bgLight: 'bg-jetspan-orange/20', iconText: 'text-jetspan-orange', hoverBg: 'group-hover:bg-jetspan-orange', hoverText: 'group-hover:text-white' },
 }
 
 /** Product names for use in dropdowns/selects */
