@@ -11,6 +11,38 @@ import {
 } from 'unocss'
 
 export default defineConfig({
+  // Safelist icons used in JS/TS data objects (bound via :class)
+  // UnoCSS cannot detect these through static analysis
+  safelist: [
+    // Products (constants/products.ts)
+    'i-carbon-gas-station', 'i-carbon-industry', 'i-carbon-solar-panel',
+    'i-carbon-flame', 'i-carbon-flash',
+    // Solar (LingoDecoder, CaseStudy)
+    'i-carbon-settings-adjust', 'i-carbon-battery-full', 'i-carbon-meter',
+    'i-carbon-plug', 'i-carbon-warning', 'i-carbon-warning-alt',
+    'i-carbon-tools', 'i-carbon-checkmark-filled',
+    // Gas (SafetyCompliance, ApplicationGrid)
+    'i-carbon-certificate-check', 'i-carbon-pressure', 'i-carbon-user-certification',
+    'i-carbon-calendar', 'i-carbon-phone-filled', 'i-carbon-document-signed',
+    'i-carbon-delivery-truck', 'i-carbon-restaurant', 'i-carbon-security',
+    // Diesel (QualityPromise, en590-diesel.vue warnings/SWIFT)
+    'i-carbon-chemistry', 'i-carbon-temperature-hot', 'i-carbon-scale',
+    'i-carbon-close-filled', 'i-carbon-money', 'i-carbon-user-multiple',
+    'i-carbon-document',
+    // About page (values)
+    'i-carbon-scis-transparent-supply', 'i-carbon-trophy', 'i-carbon-earth',
+    'i-carbon-collaborate',
+    // WhyChooseUs
+    'i-carbon-chart-line', 'i-carbon-sustainability', 'i-carbon-partnership',
+    'i-carbon-user-favorite',
+    // Contact (contactMethods)
+    'i-carbon-email', 'i-carbon-phone', 'i-mdi-whatsapp',
+    // CrossSellBanner
+    'i-carbon-arrow-right',
+    // Color preview page
+    'i-carbon-flash', 'i-carbon-rain-drop', 'i-carbon-fire',
+    'i-carbon-delivery', 'i-carbon-energy-renewable',
+  ],
   shortcuts: [
     // Buttons
     ['btn', 'px-6 py-3 rounded-lg inline-block bg-jetspan-yellow text-jetspan-black font-semibold cursor-pointer hover:bg-yellow-400 disabled:cursor-default disabled:bg-gray-400 disabled:opacity-50 transition-all duration-200'],

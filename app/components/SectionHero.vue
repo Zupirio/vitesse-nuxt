@@ -24,11 +24,11 @@ withDefaults(defineProps<Props>(), {
   >
     <!-- Background Image (when provided) -->
     <template v-if="bgImage">
-      <div class="absolute inset-0">
+      <div class="inset-0 absolute">
         <NuxtImg
           :src="bgImage"
           :alt="title"
-          class="absolute inset-0 h-full w-full object-cover"
+          class="h-full w-full inset-0 absolute object-cover"
           loading="eager"
         />
       </div>
@@ -36,11 +36,11 @@ withDefaults(defineProps<Props>(), {
     </template>
     <!-- Gradient fallback (no image) -->
     <template v-else>
-      <div class="absolute inset-0 hero-gradient" />
+      <div class="hero-gradient inset-0 absolute" />
       <!-- Dot pattern -->
-      <div class="absolute inset-0 opacity-10">
+      <div class="opacity-10 inset-0 absolute">
         <div
-          class="absolute inset-0"
+          class="inset-0 absolute"
           style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"
         />
       </div>
@@ -50,22 +50,22 @@ withDefaults(defineProps<Props>(), {
     <div class="section-container relative z-10">
       <div class="max-w-4xl" :class="{ 'mx-auto text-center': !$slots.default }">
         <!-- Badge -->
-        <div v-if="badge" class="mb-6 inline-flex items-center gap-2 rounded-full bg-jetspan-yellow/20 px-4 py-2">
+        <div v-if="badge" class="mb-6 px-4 py-2 rounded-full bg-jetspan-yellow/20 inline-flex gap-2 items-center">
           <span v-if="badgeIcon" :class="badgeIcon" class="text-jetspan-yellow" />
-          <span class="text-sm font-semibold uppercase tracking-wider text-jetspan-yellow">
+          <span class="text-sm text-jetspan-yellow tracking-wider font-semibold uppercase">
             {{ badge }}
           </span>
         </div>
 
         <!-- Title -->
-        <h1 class="heading-display mb-6 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
+        <h1 class="heading-display text-5xl text-white leading-tight font-bold mb-6 lg:text-7xl md:text-6xl">
           <slot name="title">
             {{ title }}
           </slot>
         </h1>
 
         <!-- Subtitle -->
-        <p v-if="subtitle" class="mb-8 max-w-2xl text-xl leading-relaxed text-gray-300 md:text-2xl">
+        <p v-if="subtitle" class="text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl md:text-2xl">
           {{ subtitle }}
         </p>
 
@@ -78,7 +78,7 @@ withDefaults(defineProps<Props>(), {
     </div>
 
     <!-- Decorative blurs -->
-    <div class="absolute bottom-0 right-0 h-1/3 w-1/3 rounded-full bg-jetspan-yellow/10 blur-3xl" />
-    <div class="absolute right-1/4 top-1/4 h-1/4 w-1/4 rounded-full bg-jetspan-green/10 blur-3xl" />
+    <div class="rounded-full bg-jetspan-yellow/10 h-1/3 w-1/3 bottom-0 right-0 absolute blur-3xl" />
+    <div class="rounded-full bg-jetspan-green/10 h-1/4 w-1/4 right-1/4 top-1/4 absolute blur-3xl" />
   </section>
 </template>

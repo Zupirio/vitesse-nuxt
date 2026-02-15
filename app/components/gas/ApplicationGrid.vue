@@ -45,10 +45,10 @@ const applications: Application[] = [
           class="group card"
         >
           <!-- Icon Circle -->
-          <div class="mb-6 rounded-full bg-jetspan-amber/20 flex h-16 w-16 transition-transform duration-300 items-center justify-center group-hover:scale-110">
+          <div class="bg-jetspan-amber/20 mb-6 rounded-full flex h-16 w-16 transition-transform duration-300 items-center justify-center group-hover:scale-110">
             <div
               :class="app.icon"
-              class="text-2xl text-jetspan-amber"
+              class="text-jetspan-amber text-2xl"
             />
           </div>
 

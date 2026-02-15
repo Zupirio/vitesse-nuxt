@@ -18,8 +18,9 @@ const estimatedSaving = computed(() => {
   return litres.value * pricePerLitre * bulkDiscount.value
 })
 
-const formatZAR = (n: number) =>
-  new Intl.NumberFormat('en-ZA', { style: 'currency', currency: 'ZAR', maximumFractionDigits: 0 }).format(n)
+function formatZAR(n: number) {
+  return new Intl.NumberFormat('en-ZA', { style: 'currency', currency: 'ZAR', maximumFractionDigits: 0 }).format(n)
+}
 
 const whatsappLink = computed(() => {
   const msg = `Hi Jetspan, I'd like a bulk diesel quote for ${litres.value.toLocaleString()} litres.`
@@ -31,7 +32,7 @@ const whatsappLink = computed(() => {
   <section class="section-padding bg-gray-50 dark:bg-jetspan-gray/10">
     <div class="section-container">
       <div class="mx-auto max-w-4xl">
-        <div class="text-center mb-10">
+        <div class="mb-10 text-center">
           <h2 class="section-title">
             Calculate Your Bulk Diesel Savings
           </h2>
@@ -54,9 +55,9 @@ const whatsappLink = computed(() => {
                 min="1000"
                 max="500000"
                 step="1000"
-                class="w-full accent-jetspan-yellow"
+                class="accent-jetspan-yellow w-full"
               >
-              <div class="mt-2 flex justify-between text-sm text-gray-500">
+              <div class="text-sm text-gray-500 mt-2 flex justify-between">
                 <span>1,000 L</span>
                 <span class="heading-display text-xl text-jetspan-black dark:text-white">
                   {{ litres.toLocaleString() }} L
@@ -65,19 +66,19 @@ const whatsappLink = computed(() => {
               </div>
 
               <div class="mt-6 space-y-3">
-                <div class="flex justify-between rounded-lg bg-gray-100 px-4 py-3 dark:bg-jetspan-gray/30">
+                <div class="px-4 py-3 rounded-lg bg-gray-100 flex justify-between dark:bg-jetspan-gray/30">
                   <span class="text-sm text-gray-500">Reference Price</span>
                   <span class="font-semibold">{{ formatZAR(pricePerLitre) }}/L</span>
                 </div>
-                <div class="flex justify-between rounded-lg bg-gray-100 px-4 py-3 dark:bg-jetspan-gray/30">
+                <div class="px-4 py-3 rounded-lg bg-gray-100 flex justify-between dark:bg-jetspan-gray/30">
                   <span class="text-sm text-gray-500">Bulk Discount</span>
-                  <span class="font-semibold text-jetspan-green">{{ (bulkDiscount * 100).toFixed(0) }}%</span>
+                  <span class="text-jetspan-green font-semibold">{{ (bulkDiscount * 100).toFixed(0) }}%</span>
                 </div>
               </div>
             </div>
 
             <!-- Result side -->
-            <div class="flex flex-col items-center justify-center rounded-xl bg-jetspan-yellow/10 p-8 text-center">
+            <div class="p-8 text-center rounded-xl bg-jetspan-yellow/10 flex flex-col items-center justify-center">
               <p class="text-sm text-gray-500 font-medium mb-2">
                 Estimated Monthly Saving
               </p>
@@ -97,7 +98,7 @@ const whatsappLink = computed(() => {
                 <span class="i-mdi-whatsapp text-lg" />
                 Request a Bulk Quote
               </a>
-              <NuxtLink to="/contact" class="mt-3 text-sm text-jetspan-blue underline hover:no-underline">
+              <NuxtLink to="/contact" class="text-jetspan-blue text-sm mt-3 underline hover:no-underline">
                 or fill in our RFQ form
               </NuxtLink>
             </div>

@@ -54,8 +54,8 @@ const terms = [
           class="card"
         >
           <!-- Icon Circle -->
-          <div class="mb-4 rounded-full bg-jetspan-teal/20 flex h-14 w-14 items-center justify-center">
-            <div :class="term.icon" class="text-2xl text-jetspan-teal" />
+          <div class="bg-jetspan-teal/20 mb-4 rounded-full flex h-14 w-14 items-center justify-center">
+            <div :class="term.icon" class="text-jetspan-teal text-2xl" />
           </div>
 
           <!-- Term Name -->

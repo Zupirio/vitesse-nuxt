@@ -462,7 +462,7 @@ const specs = [
         <div class="mx-auto mt-12 max-w-5xl">
           <div class="card bg-jetspan-green/10">
             <h4 class="text-xl font-bold mb-4 flex gap-3 items-center">
-              <span class="i-carbon-shield text-2xl text-jetspan-green" />
+              <span class="i-carbon-security text-2xl text-jetspan-green" />
               {{ companyInfo.name }} Security Measures
             </h4>
             <ul class="space-y-3">

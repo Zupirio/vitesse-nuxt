@@ -59,29 +59,29 @@ defineExpose({ open })
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
-      <div v-if="isOpen" class="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div v-if="isOpen" class="p-4 flex items-center inset-0 justify-center fixed z-[100]">
         <!-- Backdrop -->
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" @click="close" />
+        <div class="bg-black/60 inset-0 absolute backdrop-blur-sm" @click="close" />
 
         <!-- Modal -->
-        <div class="relative z-10 w-full max-w-lg rounded-2xl bg-white p-8 shadow-2xl dark:bg-jetspan-gray-dark">
+        <div class="p-8 rounded-2xl bg-white max-w-lg w-full shadow-2xl relative z-10 dark:bg-jetspan-gray-dark">
           <!-- Close button -->
           <button
-            class="absolute right-4 top-4 rounded-lg p-2 text-jetspan-gray transition-colors hover:bg-gray-100 dark:hover:bg-jetspan-black"
+            class="text-jetspan-gray p-2 rounded-lg transition-colors right-4 top-4 absolute hover:bg-gray-100 dark:hover:bg-jetspan-black"
             @click="close"
           >
             <div class="i-carbon-close text-xl" />
           </button>
 
           <!-- Header icon -->
-          <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-jetspan-yellow/20">
+          <div class="mb-4 rounded-full bg-jetspan-yellow/20 flex h-16 w-16 items-center justify-center">
             <div class="i-carbon-calculator text-3xl text-jetspan-yellow" />
           </div>
 
-          <h2 class="mb-2 text-2xl font-bold text-jetspan-black dark:text-white">
+          <h2 class="text-2xl text-jetspan-black font-bold mb-2 dark:text-white">
             Free Industrial Energy Cost Guide
           </h2>
-          <p class="mb-6 text-jetspan-gray dark:text-gray-400">
+          <p class="text-jetspan-gray mb-6 dark:text-gray-400">
             Compare diesel, solar, and gas running costs for your operation. Get the numbers that matter.
           </p>
 
@@ -92,7 +92,7 @@ defineExpose({ open })
                 type="text"
                 required
                 placeholder="Your name"
-                class="w-full rounded-lg border-2 border-gray-300 bg-white px-4 py-3 text-jetspan-black transition-colors focus:border-jetspan-yellow focus:outline-none dark:border-jetspan-gray dark:bg-jetspan-black dark:text-white"
+                class="text-jetspan-black px-4 py-3 border-2 border-gray-300 rounded-lg bg-white w-full transition-colors dark:text-white focus:outline-none dark:border-jetspan-gray focus:border-jetspan-yellow dark:bg-jetspan-black"
               >
             </div>
             <div>
@@ -101,7 +101,7 @@ defineExpose({ open })
                 type="email"
                 required
                 placeholder="Email address"
-                class="w-full rounded-lg border-2 border-gray-300 bg-white px-4 py-3 text-jetspan-black transition-colors focus:border-jetspan-yellow focus:outline-none dark:border-jetspan-gray dark:bg-jetspan-black dark:text-white"
+                class="text-jetspan-black px-4 py-3 border-2 border-gray-300 rounded-lg bg-white w-full transition-colors dark:text-white focus:outline-none dark:border-jetspan-gray focus:border-jetspan-yellow dark:bg-jetspan-black"
               >
             </div>
             <div>
@@ -109,14 +109,14 @@ defineExpose({ open })
                 v-model="form.company"
                 type="text"
                 placeholder="Company name (optional)"
-                class="w-full rounded-lg border-2 border-gray-300 bg-white px-4 py-3 text-jetspan-black transition-colors focus:border-jetspan-yellow focus:outline-none dark:border-jetspan-gray dark:bg-jetspan-black dark:text-white"
+                class="text-jetspan-black px-4 py-3 border-2 border-gray-300 rounded-lg bg-white w-full transition-colors dark:text-white focus:outline-none dark:border-jetspan-gray focus:border-jetspan-yellow dark:bg-jetspan-black"
               >
             </div>
             <div>
               <select
                 v-model="form.interest"
                 required
-                class="w-full rounded-lg border-2 border-gray-300 bg-white px-4 py-3 text-jetspan-black transition-colors focus:border-jetspan-yellow focus:outline-none dark:border-jetspan-gray dark:bg-jetspan-black dark:text-white"
+                class="text-jetspan-black px-4 py-3 border-2 border-gray-300 rounded-lg bg-white w-full transition-colors dark:text-white focus:outline-none dark:border-jetspan-gray focus:border-jetspan-yellow dark:bg-jetspan-black"
               >
                 <option value="" disabled>
                   Primary energy need
@@ -127,13 +127,13 @@ defineExpose({ open })
               </select>
             </div>
 
-            <button type="submit" class="btn w-full text-center">
+            <button type="submit" class="btn text-center w-full">
               <span class="i-carbon-download mr-2 inline-block" />
               Get My Free Guide
             </button>
           </form>
 
-          <p class="mt-4 text-center text-xs text-jetspan-gray dark:text-gray-500">
+          <p class="text-xs text-jetspan-gray mt-4 text-center dark:text-gray-500">
             No spam. Your data stays between us.
           </p>
         </div>

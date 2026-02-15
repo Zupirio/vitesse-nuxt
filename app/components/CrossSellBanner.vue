@@ -39,13 +39,13 @@ const variantStyles: Record<string, { border: string, iconBg: string, iconColor:
 
 <template>
   <div
-    class="group relative overflow-hidden rounded-xl border-2 bg-white p-6 transition-all duration-300 hover:shadow-lg dark:bg-jetspan-gray-dark md:p-8"
+    class="group p-6 border-2 rounded-xl bg-white transition-all duration-300 relative overflow-hidden md:p-8 dark:bg-jetspan-gray-dark hover:shadow-lg"
     :class="variantStyles[variant].border"
   >
-    <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+    <div class="flex flex-col gap-4 items-start sm:flex-row sm:items-center">
       <!-- Icon -->
       <div
-        class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-110"
+        class="rounded-full flex flex-shrink-0 h-14 w-14 transition-transform duration-300 items-center justify-center group-hover:scale-110"
         :class="variantStyles[variant].iconBg"
       >
         <div class="i-carbon-solar-panel text-2xl" :class="variantStyles[variant].iconColor" />
@@ -53,7 +53,7 @@ const variantStyles: Record<string, { border: string, iconBg: string, iconColor:
 
       <!-- Text -->
       <div class="flex-1">
-        <h3 class="mb-1 text-lg font-bold text-jetspan-black dark:text-white">
+        <h3 class="text-lg text-jetspan-black font-bold mb-1 dark:text-white">
           {{ title }}
         </h3>
         <p class="text-sm text-jetspan-gray dark:text-gray-400">
@@ -64,7 +64,7 @@ const variantStyles: Record<string, { border: string, iconBg: string, iconColor:
       <!-- CTA -->
       <NuxtLink
         :to="ctaLink"
-        class="inline-flex flex-shrink-0 items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all duration-200"
+        class="text-sm font-semibold px-5 py-2.5 rounded-lg inline-flex flex-shrink-0 gap-2 transition-all duration-200 items-center"
         :class="`${variantStyles[variant].iconBg} ${variantStyles[variant].iconColor} hover:opacity-80`"
       >
         {{ ctaText }}

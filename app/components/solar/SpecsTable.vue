@@ -59,7 +59,7 @@ const tiers: Tier[] = [
           <!-- Recommended Badge -->
           <div
             v-if="tier.badge"
-            class="text-xs text-white tracking-wider font-bold px-3 py-1 rounded-full bg-jetspan-teal uppercase right-4 top-4 absolute"
+            class="bg-jetspan-teal text-xs text-white tracking-wider font-bold px-3 py-1 rounded-full uppercase right-4 top-4 absolute"
           >
             {{ tier.badge }}
           </div>

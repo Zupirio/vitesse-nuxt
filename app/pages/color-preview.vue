@@ -13,13 +13,13 @@ const products = [
     title: 'Diesel',
     description: 'High-quality diesel fuel for commercial and industrial use',
     color: 'yellow',
-    icon: 'i-carbon-hybrid',
+    icon: 'i-carbon-flash',
   },
   {
     title: 'Oil Products',
     description: 'Premium petroleum products for various applications',
     color: 'orange',
-    icon: 'i-carbon-petroleum',
+    icon: 'i-carbon-rain-drop',
   },
   {
     title: 'Petroleum Products',
@@ -49,7 +49,7 @@ const features = [
     color: 'orange',
   },
   {
-    icon: 'i-carbon-renewable-energy',
+    icon: 'i-carbon-energy-renewable',
     title: 'Sustainable',
     description: 'Committed to environmental responsibility',
     color: 'teal',

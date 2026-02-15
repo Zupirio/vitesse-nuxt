@@ -58,7 +58,7 @@ const stats = [
               :key="stat.label"
               class="px-6 py-5 rounded-xl bg-jetspan-light dark:bg-jetspan-gray-dark"
             >
-              <div class="text-3xl text-jetspan-amber font-bold">
+              <div class="text-jetspan-amber text-3xl font-bold">
                 {{ stat.value }}
               </div>
               <div class="text-sm text-jetspan-gray font-medium mt-1 dark:text-gray-400">
@@ -122,8 +122,8 @@ const stats = [
       </div>
 
       <!-- Decorative blurs -->
-      <div class="rounded-full bg-jetspan-amber/10 h-1/3 w-1/3 bottom-0 right-0 absolute blur-3xl" />
-      <div class="rounded-full bg-jetspan-teal/10 h-1/4 w-1/4 right-1/4 top-1/4 absolute blur-3xl" />
+      <div class="bg-jetspan-amber/10 rounded-full h-1/3 w-1/3 bottom-0 right-0 absolute blur-3xl" />
+      <div class="bg-jetspan-teal/10 rounded-full h-1/4 w-1/4 right-1/4 top-1/4 absolute blur-3xl" />
     </section>
   </div>
 </template>

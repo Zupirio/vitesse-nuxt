@@ -41,7 +41,7 @@ const metrics = [
       <div class="mx-auto max-w-5xl">
         <div class="border-2 border-green-200 rounded-2xl overflow-hidden dark:border-green-900/40">
           <!-- Header -->
-          <div class="from-green-600 px-8 py-6 text-white to-green-700 bg-gradient-to-r">
+          <div class="text-white px-8 py-6 from-green-600 to-green-700 bg-gradient-to-r">
             <div class="flex flex-wrap gap-4 items-center justify-between">
               <div>
                 <h2 class="heading-display text-3xl mb-1">
@@ -51,7 +51,7 @@ const metrics = [
                   Every shipment independently verified to exceed international standards
                 </p>
               </div>
-              <div class="flex gap-2 items-center rounded-full bg-white/20 px-4 py-2 backdrop-blur">
+              <div class="px-4 py-2 rounded-full bg-white/20 flex gap-2 items-center backdrop-blur">
                 <span class="i-carbon-checkmark-filled text-lg" />
                 <span class="text-sm font-semibold">SGS / Intertek Verified</span>
               </div>
@@ -59,7 +59,7 @@ const metrics = [
           </div>
 
           <!-- Metric Cards -->
-          <div class="gap-6 grid p-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="p-8 gap-6 grid lg:grid-cols-4 sm:grid-cols-2">
             <div
               v-for="metric in metrics"
               :key="metric.label"
