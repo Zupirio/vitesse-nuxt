@@ -8,12 +8,12 @@ const terms = [
   {
     name: 'Inverter',
     icon: 'i-carbon-settings-adjust',
-    description: 'The brain of the system. Converts DC power from panels into AC power your machines actually use. Sunsynk and Victron are the trusted names.',
+    description: 'The brain of the system. Converts DC power from panels into AC power your machines actually use. Megarevo microgrid inverters handle 30–500kW commercial sites.',
   },
   {
     name: 'Lithium Cycles',
     icon: 'i-carbon-battery-full',
-    description: 'How many times you can charge and discharge your battery. Quality lithium batteries give you 6,000+ cycles — that\'s 15+ years of daily use.',
+    description: 'How many times you can charge and discharge your battery. Our PowerCo LiFePO4 banks deliver 7,000+ cycles at 90% DOD — that\'s 15+ years of daily use.',
   },
   {
     name: 'kWp (Kilowatt-peak)',
@@ -54,8 +54,8 @@ const terms = [
           class="card"
         >
           <!-- Icon Circle -->
-          <div class="bg-jetspan-teal/20 mb-4 rounded-full flex h-14 w-14 items-center justify-center">
-            <div :class="term.icon" class="text-jetspan-teal text-2xl" />
+          <div class="mb-4 rounded-full bg-jetspan-teal/20 flex h-14 w-14 items-center justify-center">
+            <div :class="term.icon" class="text-2xl text-jetspan-teal" />
           </div>
 
           <!-- Term Name -->

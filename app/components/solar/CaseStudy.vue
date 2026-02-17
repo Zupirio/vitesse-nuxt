@@ -18,7 +18,7 @@ const steps = [
     accentBg: 'bg-jetspan-teal/20',
     borderColor: 'border-jetspan-teal/30',
     numberBg: 'bg-jetspan-teal',
-    description: 'Jetspan installed a 100kW hybrid solar system with 200kWh lithium storage. Sunsynk inverters managing grid, solar, and battery seamlessly. Zero production interruption during a Stage 6 week.',
+    description: 'Jetspan installed a Megarevo MPS100 microgrid inverter with 165× Thornova 615W bifacial panels and a PowerCo 215kWh HV lithium bank. Grid, solar, battery, and diesel backup managed seamlessly. Zero production interruption during a Stage 6 week.',
   },
   {
     number: 3,

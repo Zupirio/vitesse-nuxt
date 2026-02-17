@@ -8,28 +8,40 @@ interface Tier {
 
 const tiers: Tier[] = [
   {
-    name: 'Essential Backup',
+    name: 'Residential / Small Business',
     recommended: false,
     specs: [
-      { label: 'Inverter', value: 'Sunsynk 8kW Hybrid' },
-      { label: 'Panels', value: '12× 550W Mono (6.6kWp)' },
-      { label: 'Battery', value: '1× Hubble AM-2 5.5kWh' },
-      { label: 'Backup Duration', value: '4-6 hours (essential loads)' },
-      { label: 'Best For', value: 'Office, retail, light commercial' },
-      { label: 'Indicative Price', value: 'From R150,000 ex VAT' },
+      { label: 'Inverter', value: 'Sunova eFox 5kW Hybrid' },
+      { label: 'Panels', value: '10× Thornova 580W N-type (5.8kWp)' },
+      { label: 'Battery', value: 'Built-in 10kWh LiFePO4' },
+      { label: 'Panel Efficiency', value: '22.5–23.2%' },
+      { label: 'Backup Duration', value: '6–10 hours (essential loads)' },
+      { label: 'Best For', value: 'Home, office, retail, small workshop' },
     ],
   },
   {
-    name: 'Full Off-Grid',
-    badge: 'Recommended',
+    name: 'Commercial',
+    badge: 'Most Popular',
     recommended: true,
     specs: [
-      { label: 'Inverter', value: 'Victron Quattro 15kW' },
-      { label: 'Panels', value: '30× 550W Mono (16.5kWp)' },
-      { label: 'Battery', value: '4× Hubble AM-2 (22kWh)' },
-      { label: 'Backup Duration', value: '12-18 hours (full site)' },
-      { label: 'Best For', value: 'Factory, warehouse, farm' },
-      { label: 'Indicative Price', value: 'From R450,000 ex VAT' },
+      { label: 'Inverter', value: 'Megarevo MPS100 Microgrid (100kW)' },
+      { label: 'Panels', value: '165× Thornova 615W Bifacial (101kWp)' },
+      { label: 'Battery', value: 'PowerCo 71.68kWh HV Stacked' },
+      { label: 'Panel Efficiency', value: '22.8–23.0% (bifacial +30%)' },
+      { label: 'Backup Duration', value: '10–16 hours (full site)' },
+      { label: 'Best For', value: 'Factory, warehouse, farm, logistics' },
+    ],
+  },
+  {
+    name: 'Industrial / Microgrid',
+    recommended: false,
+    specs: [
+      { label: 'Inverter', value: 'Megarevo MPS500 Microgrid (500kW)' },
+      { label: 'Panels', value: '820× Thornova 615W Bifacial (504kWp)' },
+      { label: 'Battery', value: 'PowerCo 215kWh+ / Container ESS 1MWh' },
+      { label: 'Panel Efficiency', value: '22.8–23.0% (bifacial +30%)' },
+      { label: 'Backup Duration', value: '24+ hours (full facility)' },
+      { label: 'Best For', value: 'Mining, manufacturing, data centres' },
     ],
   },
 ]
@@ -44,12 +56,12 @@ const tiers: Tier[] = [
           System Specifications
         </h2>
         <p class="section-subtitle">
-          Two tiers. Proven brands. Real numbers.
+          Three tiers. Proven hardware. Real numbers.
         </p>
       </div>
 
       <!-- Comparison Cards -->
-      <div class="mx-auto gap-8 grid max-w-5xl md:grid-cols-2">
+      <div class="mx-auto gap-8 grid max-w-7xl lg:grid-cols-3 md:grid-cols-2">
         <div
           v-for="tier in tiers"
           :key="tier.name"
@@ -59,7 +71,7 @@ const tiers: Tier[] = [
           <!-- Recommended Badge -->
           <div
             v-if="tier.badge"
-            class="bg-jetspan-teal text-xs text-white tracking-wider font-bold px-3 py-1 rounded-full uppercase right-4 top-4 absolute"
+            class="text-xs text-white tracking-wider font-bold px-3 py-1 rounded-full bg-jetspan-teal uppercase right-4 top-4 absolute"
           >
             {{ tier.badge }}
           </div>
@@ -107,7 +119,7 @@ const tiers: Tier[] = [
 
       <!-- Disclaimer -->
       <p class="text-sm text-jetspan-gray mt-8 text-center dark:text-gray-500">
-        Prices indicative as of 2024. Subject to site assessment.
+        All systems custom-designed per site. Prices subject to site assessment.
       </p>
     </div>
   </section>
