@@ -1,15 +1,12 @@
 <script setup lang="ts">
 interface Tier {
   name: string
-  badge?: string
-  recommended: boolean
   specs: { label: string, value: string }[]
 }
 
 const tiers: Tier[] = [
   {
     name: 'Residential / Small Business',
-    recommended: false,
     specs: [
       { label: 'Inverter', value: 'Sunova eFox 5kW Hybrid' },
       { label: 'Panels', value: '10× Thornova 580W N-type (5.8kWp)' },
@@ -21,8 +18,6 @@ const tiers: Tier[] = [
   },
   {
     name: 'Commercial',
-    badge: 'Most Popular',
-    recommended: true,
     specs: [
       { label: 'Inverter', value: 'Megarevo MPS100 Microgrid (100kW)' },
       { label: 'Panels', value: '165× Thornova 615W Bifacial (101kWp)' },
@@ -34,7 +29,6 @@ const tiers: Tier[] = [
   },
   {
     name: 'Industrial / Microgrid',
-    recommended: false,
     specs: [
       { label: 'Inverter', value: 'Megarevo MPS500 Microgrid (500kW)' },
       { label: 'Panels', value: '820× Thornova 615W Bifacial (504kWp)' },
@@ -65,22 +59,10 @@ const tiers: Tier[] = [
         <div
           v-for="tier in tiers"
           :key="tier.name"
-          class="border-2 rounded-xl bg-white shadow-lg transition-shadow duration-300 relative overflow-hidden dark:bg-jetspan-gray-dark hover:shadow-xl"
-          :class="tier.recommended ? 'border-jetspan-teal' : 'border-gray-200 dark:border-jetspan-gray'"
+          class="border-2 border-gray-200 rounded-xl bg-white shadow-lg transition-shadow duration-300 overflow-hidden dark:border-jetspan-gray dark:bg-jetspan-gray-dark hover:shadow-xl"
         >
-          <!-- Recommended Badge -->
-          <div
-            v-if="tier.badge"
-            class="text-xs text-white tracking-wider font-bold px-3 py-1 rounded-full bg-jetspan-teal uppercase right-4 top-4 absolute"
-          >
-            {{ tier.badge }}
-          </div>
-
           <!-- Card Header -->
-          <div
-            class="p-6 pb-4"
-            :class="tier.recommended ? 'bg-jetspan-teal/10' : 'bg-gray-50 dark:bg-jetspan-gray/20'"
-          >
+          <div class="p-6 pb-4 bg-gray-50 dark:bg-jetspan-gray/20">
             <h3 class="text-2xl text-jetspan-black font-bold dark:text-white">
               {{ tier.name }}
             </h3>
@@ -106,10 +88,7 @@ const tiers: Tier[] = [
           <div class="p-6 pt-2">
             <NuxtLink
               to="/contact"
-              class="font-semibold py-3 text-center rounded-lg w-full block transition-all duration-200"
-              :class="tier.recommended
-                ? 'bg-jetspan-teal text-white hover:bg-jetspan-teal/90'
-                : 'bg-gray-100 text-jetspan-black hover:bg-gray-200 dark:bg-jetspan-gray/30 dark:text-white dark:hover:bg-jetspan-gray/50'"
+              class="text-jetspan-black font-semibold py-3 text-center rounded-lg bg-gray-100 w-full block transition-all duration-200 dark:text-white dark:bg-jetspan-gray/30 hover:bg-gray-200 dark:hover:bg-jetspan-gray/50"
             >
               Get a Custom Quote
             </NuxtLink>
