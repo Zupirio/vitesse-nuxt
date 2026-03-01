@@ -83,7 +83,7 @@ useSeoMeta({
       </div>
 
       <!-- Decorative blur -->
-      <div class="rounded-full bg-jetspan-teal/10 h-1/3 w-1/3 bottom-0 left-0 absolute blur-3xl" />
+      <div class="bg-jetspan-teal/10 rounded-full h-1/3 w-1/3 bottom-0 left-0 absolute blur-3xl" />
     </section>
   </div>
 </template>

@@ -1,11 +1,15 @@
 <script setup lang="ts">
+type TierColor = 'teal' | 'blue' | 'amber'
+
 interface Tier {
+  color: TierColor
   name: string
   specs: { label: string, value: string }[]
 }
 
 const tiers: Tier[] = [
   {
+    color: 'teal',
     name: 'Residential / Small Business',
     specs: [
       { label: 'Inverter', value: 'Sunova eFox 5kW Hybrid' },
@@ -17,6 +21,7 @@ const tiers: Tier[] = [
     ],
   },
   {
+    color: 'blue',
     name: 'Commercial',
     specs: [
       { label: 'Inverter', value: 'Megarevo MPS100 Microgrid (100kW)' },
@@ -28,6 +33,7 @@ const tiers: Tier[] = [
     ],
   },
   {
+    color: 'amber',
     name: 'Industrial / Microgrid',
     specs: [
       { label: 'Inverter', value: 'Megarevo MPS500 Microgrid (500kW)' },
@@ -59,11 +65,30 @@ const tiers: Tier[] = [
         <div
           v-for="tier in tiers"
           :key="tier.name"
-          class="border-2 border-gray-200 rounded-xl bg-white shadow-lg transition-shadow duration-300 overflow-hidden dark:border-jetspan-gray dark:bg-jetspan-gray-dark hover:shadow-xl"
+          class="border-2 rounded-xl bg-white shadow-lg transition-shadow duration-300 overflow-hidden dark:bg-jetspan-gray-dark hover:shadow-xl"
+          :class="tier.color === 'teal'
+            ? 'border-jetspan-teal/40 dark:border-jetspan-teal/50'
+            : tier.color === 'blue'
+              ? 'border-jetspan-blue/40 dark:border-jetspan-blue/50'
+              : 'border-jetspan-amber/40 dark:border-jetspan-amber/50'"
         >
           <!-- Card Header -->
-          <div class="p-6 pb-4 bg-gray-50 dark:bg-jetspan-gray/20">
-            <h3 class="text-2xl text-jetspan-black font-bold dark:text-white">
+          <div
+            class="p-6 pb-4"
+            :class="tier.color === 'teal'
+              ? 'bg-jetspan-teal/10 dark:bg-jetspan-teal/20'
+              : tier.color === 'blue'
+                ? 'bg-jetspan-blue/10 dark:bg-jetspan-blue/20'
+                : 'bg-jetspan-amber/10 dark:bg-jetspan-amber/20'"
+          >
+            <h3
+              class="text-2xl font-bold"
+              :class="tier.color === 'teal'
+                ? 'text-jetspan-teal'
+                : tier.color === 'blue'
+                  ? 'text-jetspan-blue'
+                  : 'text-jetspan-amber'"
+            >
               {{ tier.name }}
             </h3>
           </div>
@@ -75,7 +100,14 @@ const tiers: Tier[] = [
               :key="spec.label"
               class="py-4 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between"
             >
-              <span class="text-sm text-jetspan-gray font-semibold dark:text-gray-400">
+              <span
+                class="text-sm font-semibold"
+                :class="tier.color === 'teal'
+                  ? 'text-jetspan-teal/80 dark:text-jetspan-teal/90'
+                  : tier.color === 'blue'
+                    ? 'text-jetspan-blue/80 dark:text-jetspan-blue/90'
+                    : 'text-jetspan-amber/90 dark:text-jetspan-amber'"
+              >
                 {{ spec.label }}
               </span>
               <span class="text-sm text-jetspan-black font-medium dark:text-white">
@@ -88,7 +120,12 @@ const tiers: Tier[] = [
           <div class="p-6 pt-2">
             <NuxtLink
               to="/contact"
-              class="text-jetspan-black font-semibold py-3 text-center rounded-lg bg-gray-100 w-full block transition-all duration-200 dark:text-white dark:bg-jetspan-gray/30 hover:bg-gray-200 dark:hover:bg-jetspan-gray/50"
+              class="font-semibold py-3 text-center rounded-lg w-full block transition-all duration-200"
+              :class="tier.color === 'teal'
+                ? 'text-jetspan-teal bg-jetspan-teal/10 hover:bg-jetspan-teal/20'
+                : tier.color === 'blue'
+                  ? 'text-jetspan-blue bg-jetspan-blue/10 hover:bg-jetspan-blue/20'
+                  : 'text-jetspan-amber bg-jetspan-amber/10 hover:bg-jetspan-amber/20'"
             >
               Get a Custom Quote
             </NuxtLink>

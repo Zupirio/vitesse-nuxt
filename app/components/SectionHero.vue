@@ -5,6 +5,7 @@ interface Props {
   badge?: string
   badgeIcon?: string
   bgImage?: string
+  bgImagePosition?: string
   compact?: boolean
 }
 
@@ -13,6 +14,7 @@ withDefaults(defineProps<Props>(), {
   badge: undefined,
   badgeIcon: undefined,
   bgImage: undefined,
+  bgImagePosition: 'object-center',
   compact: false,
 })
 </script>
@@ -28,7 +30,7 @@ withDefaults(defineProps<Props>(), {
         <NuxtImg
           :src="bgImage"
           :alt="title"
-          class="h-full w-full inset-0 absolute object-cover"
+          class="h-full w-full inset-0 absolute object-cover" :class="[bgImagePosition]"
           loading="eager"
         />
       </div>
@@ -36,7 +38,7 @@ withDefaults(defineProps<Props>(), {
     </template>
     <!-- Gradient fallback (no image) -->
     <template v-else>
-      <div class="hero-gradient inset-0 absolute" />
+      <div class="inset-0 absolute hero-gradient" />
       <!-- Dot pattern -->
       <div class="opacity-10 inset-0 absolute">
         <div
