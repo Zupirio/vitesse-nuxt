@@ -243,10 +243,10 @@ const contactMethods = [
                     <div :class="method.icon" class="text-2xl text-jetspan-yellow transition-colors group-hover:text-jetspan-black" />
                   </div>
                   <div>
-                    <h4 class="text-jetspan-black font-semibold mb-1 dark:text-white">
+                    <h4 class="text-lg text-jetspan-black font-semibold mb-1 dark:text-white">
                       {{ method.title }}
                     </h4>
-                    <p class="text-jetspan-gray dark:text-gray-400">
+                    <p class="text-base text-jetspan-gray dark:text-gray-400">
                       {{ method.value }}
                     </p>
                   </div>
@@ -254,27 +254,27 @@ const contactMethods = [
               </div>
             </div>
 
-            <div class="card">
-              <h3 class="heading-display text-2xl text-jetspan-black mb-4 dark:text-white">
-                Business Hours
-              </h3>
-              <div class="space-y-3">
-                <div class="flex justify-between">
-                  <span class="text-jetspan-gray dark:text-gray-400">Monday - Friday</span>
-                  <span class="text-jetspan-black font-semibold dark:text-white">8:00 AM - 5:00 PM</span>
+            <div class="card border-2 border-jetspan-green bg-jetspan-green/5">
+              <div class="mb-4 flex gap-3 items-center">
+                <div class="rounded-full bg-jetspan-green/20 flex flex-shrink-0 h-12 w-12 items-center justify-center">
+                  <span class="i-carbon-time text-2xl text-jetspan-green" />
                 </div>
-                <div class="flex justify-between">
-                  <span class="text-jetspan-gray dark:text-gray-400">Saturday</span>
-                  <span class="text-jetspan-black font-semibold dark:text-white">9:00 AM - 1:00 PM</span>
+                <h3 class="heading-display text-2xl text-jetspan-black dark:text-white">
+                  Always Available
+                </h3>
+              </div>
+              <div class="space-y-4">
+                <div class="flex gap-3 items-center">
+                  <span class="i-carbon-checkmark-filled text-xl text-jetspan-green flex-shrink-0" />
+                  <span class="text-lg text-jetspan-black font-semibold dark:text-white">Open 24/7 — We never close</span>
                 </div>
-                <div class="flex justify-between">
-                  <span class="text-jetspan-gray dark:text-gray-400">Sunday</span>
-                  <span class="text-jetspan-black font-semibold dark:text-white">Closed</span>
-                </div>
-                <div class="pt-3 border-t border-gray-200 dark:border-jetspan-gray">
-                  <p class="text-sm text-jetspan-gray dark:text-gray-400">
-                    <span class="i-carbon-time mr-2 inline-block" />
-                    24/7 Emergency Support Available
+                <p class="text-base text-jetspan-gray dark:text-gray-400">
+                  As an online company, we're available around the clock. Reach us anytime via email, phone, or WhatsApp — day or night.
+                </p>
+                <div class="pt-3 border-t border-jetspan-green/20">
+                  <p class="text-base text-jetspan-gray dark:text-gray-400">
+                    <span class="i-carbon-globe text-jetspan-green mr-2 inline-block" />
+                    Enquiries processed and responded to 365 days a year
                   </p>
                 </div>
               </div>
