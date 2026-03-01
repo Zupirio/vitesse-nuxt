@@ -146,7 +146,7 @@ export const products: Product[] = [
   },
   {
     id: 'gas-lpg',
-    icon: 'i-carbon-flame',
+    icon: 'i-carbon-fire',
     title: 'Gas (LPG)',
     subtitle: 'Instant Heat. Cleaner Energy.',
     description: 'Bulk LPG supply for industry, hospitality, and agriculture. Clean-burning, portable fuel that heats faster than electricity and burns cleaner than diesel.',

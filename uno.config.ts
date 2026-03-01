@@ -18,7 +18,7 @@ export default defineConfig({
     'i-carbon-gas-station',
     'i-carbon-industry',
     'i-carbon-solar-panel',
-    'i-carbon-flame',
+    'i-carbon-fire',
     'i-carbon-flash',
     // Product color map classes (dynamic bg/text/bgLight in products showcase/pages)
     'bg-jetspan-yellow',
@@ -107,9 +107,10 @@ export default defineConfig({
     'i-carbon-sustainability',
     'i-carbon-partnership',
     'i-carbon-user-favorite',
-    // Contact (contactMethods)
+    // Contact (contactMethods + availability)
     'i-carbon-email',
     'i-carbon-phone',
+    'i-carbon-globe',
     'i-mdi-whatsapp',
     // CrossSellBanner
     'i-carbon-arrow-right',
