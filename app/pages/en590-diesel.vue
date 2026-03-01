@@ -88,20 +88,20 @@ const specs = [
     </SectionHero>
 
     <!-- Product Specifications -->
-    <section id="specifications" class="section-padding bg-white dark:bg-jetspan-black">
+    <section id="specifications" class="py-12 bg-white md:py-20 dark:bg-jetspan-black">
       <div class="section-container">
-        <div class="mb-16 text-center">
+        <div class="mb-10 text-center">
           <h2 class="section-title">
             Technical Specifications
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle mt-4">
             EN590 10PPM Ultra-Low Sulfur Diesel meets stringent European standards
           </p>
         </div>
 
         <div class="mx-auto max-w-5xl">
           <div class="card overflow-hidden">
-            <div class="bg-jetspan-navy p-6">
+            <div class="p-6 bg-jetspan-navy">
               <h3 class="text-2xl text-white font-bold">
                 EN590:2013 Standard Compliance
               </h3>
@@ -143,7 +143,7 @@ const specs = [
 
           <div class="mt-8 gap-6 grid md:grid-cols-3">
             <div class="card text-center">
-              <div class="i-carbon-chemistry text-jetspan-blue text-5xl mx-auto mb-4" />
+              <div class="i-carbon-chemistry text-5xl text-jetspan-blue mx-auto mb-4" />
               <h4 class="text-lg font-bold mb-2">
                 Ultra-Low Sulfur
               </h4>
@@ -181,9 +181,9 @@ const specs = [
     <LazyDieselBulkCalculator />
 
     <!-- Transaction Procedures -->
-    <section id="procedures" class="section-padding bg-gray-50 dark:bg-jetspan-gray/10">
+    <section id="procedures" class="py-12 bg-gray-50 md:py-20 dark:bg-jetspan-gray/10">
       <div class="section-container">
-        <div class="mb-16 text-center">
+        <div class="mb-10 text-center">
           <h2 class="section-title">
             Transaction Procedures
           </h2>
@@ -342,9 +342,9 @@ const specs = [
     </section>
 
     <!-- Banking & Financial Instruments -->
-    <section id="banking" class="section-padding bg-white dark:bg-jetspan-black">
+    <section id="banking" class="py-12 bg-white md:py-20 dark:bg-jetspan-black">
       <div class="section-container">
-        <div class="mb-16 text-center">
+        <div class="mb-10 text-center">
           <h2 class="section-title">
             Banking & Financial Instruments
           </h2>
@@ -430,9 +430,9 @@ const specs = [
     </section>
 
     <!-- Risk Management & Fraud Warnings -->
-    <section id="risk-management" class="section-padding bg-gray-50 dark:bg-jetspan-gray/10">
+    <section id="risk-management" class="py-12 bg-gray-50 md:py-20 dark:bg-jetspan-gray/10">
       <div class="section-container">
-        <div class="mb-16 text-center">
+        <div class="mb-10 text-center">
           <h2 class="section-title">
             Risk Management & Fraud Awareness
           </h2>
@@ -489,9 +489,9 @@ const specs = [
     </section>
 
     <!-- Documentation Guide -->
-    <section id="documentation" class="section-padding bg-white dark:bg-jetspan-black">
+    <section id="documentation" class="py-12 bg-white md:py-20 dark:bg-jetspan-black">
       <div class="section-container">
-        <div class="mb-16 text-center">
+        <div class="mb-10 text-center">
           <h2 class="section-title">
             Essential Documentation
           </h2>
@@ -553,17 +553,21 @@ const specs = [
     </section>
 
     <!-- Cross-Sell Banner -->
-    <CrossSellBanner
-      title="Why burn money while the sun shines?"
-      description="Diesel costs R8–12/kWh. Solar delivers power at R0.80/kWh. Let Jetspan help you switch and save up to 90% on daytime energy."
-      cta-text="Explore Solar Solutions"
-      cta-link="/solar-solutions"
-      icon="i-carbon-sun"
-      variant="diesel-to-solar"
-    />
+    <section class="py-12 bg-white md:py-20 dark:bg-jetspan-black">
+      <div class="section-container">
+        <CrossSellBanner
+          title="Why burn money while the sun shines?"
+          description="Diesel costs R8–12/kWh. Solar delivers power at R0.80/kWh. Let Jetspan help you switch and save up to 90% on daytime energy."
+          cta-text="Explore Solar Solutions"
+          cta-link="/solar-solutions"
+          icon="i-carbon-sun"
+          variant="diesel-to-solar"
+        />
+      </div>
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="from-jetspan-navy text-white section-padding to-jetspan-black bg-gradient-to-br">
+    <section id="contact" class="text-white py-12 from-jetspan-navy to-jetspan-black bg-gradient-to-br md:py-20">
       <div class="section-container">
         <div class="mx-auto text-center max-w-4xl">
           <h2 class="text-4xl font-bold mb-6">
@@ -604,7 +608,7 @@ const specs = [
           </div>
 
           <div class="mt-12">
-            <NuxtLink to="/contact" class="btn-primary text-lg inline-flex gap-2 items-center">
+            <NuxtLink to="/contact" class="text-lg btn-primary inline-flex gap-2 items-center">
               <span class="i-carbon-send" />
               Submit RFQ
             </NuxtLink>

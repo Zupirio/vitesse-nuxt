@@ -29,7 +29,7 @@ const whatsappLink = computed(() => {
 </script>
 
 <template>
-  <section class="section-padding bg-gray-50 dark:bg-jetspan-gray/10">
+  <section class="py-12 bg-gray-50 md:py-20 dark:bg-jetspan-gray/10">
     <div class="section-container">
       <div class="mx-auto max-w-4xl">
         <div class="mb-10 text-center">
@@ -98,7 +98,7 @@ const whatsappLink = computed(() => {
                 <span class="i-mdi-whatsapp text-lg" />
                 Request a Bulk Quote
               </a>
-              <NuxtLink to="/contact" class="text-jetspan-blue text-sm mt-3 underline hover:no-underline">
+              <NuxtLink to="/contact" class="text-sm text-jetspan-blue mt-3 underline hover:no-underline">
                 or fill in our RFQ form
               </NuxtLink>
             </div>

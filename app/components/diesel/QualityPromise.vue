@@ -36,7 +36,7 @@ const metrics = [
 </script>
 
 <template>
-  <section class="section-padding bg-white dark:bg-jetspan-black">
+  <section class="py-12 bg-white md:py-20 dark:bg-jetspan-black">
     <div class="section-container">
       <div class="mx-auto max-w-5xl">
         <div class="border-2 border-green-200 rounded-2xl overflow-hidden dark:border-green-900/40">
