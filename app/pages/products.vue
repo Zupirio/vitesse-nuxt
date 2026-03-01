@@ -44,7 +44,7 @@ useSeoMeta({
                     <div :class="product.icon" />
                   </div>
 
-                  <h2 class="text-4xl text-jetspan-black font-bold mb-2 dark:text-white heading-display">
+                  <h2 class="heading-display text-4xl text-jetspan-black font-bold mb-2 dark:text-white">
                     {{ product.title }}
                   </h2>
                   <p class="text-jetspan-green font-semibold mb-4">
@@ -100,7 +100,7 @@ useSeoMeta({
                       <div
                         v-for="application in product.applications"
                         :key="application"
-                        class="text-sm text-jetspan-gray px-3 py-2 rounded-lg dark:text-gray-400"
+                        class="text-base text-jetspan-gray px-3 py-2 rounded-lg dark:text-gray-400"
                         :class="productColorMap[product.color].bgLight"
                       >
                         {{ application }}
@@ -118,7 +118,7 @@ useSeoMeta({
                 <NuxtLink
                   v-if="product.route"
                   :to="product.route"
-                  class="btn-outline text-sm"
+                  class="text-sm btn-outline"
                 >
                   Learn More
                 </NuxtLink>
