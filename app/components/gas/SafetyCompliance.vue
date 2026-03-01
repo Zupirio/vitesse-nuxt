@@ -60,10 +60,10 @@ const safetyPoints: SafetyPoint[] = [
           class="group card"
         >
           <!-- Icon Circle -->
-          <div class="bg-jetspan-amber/20 group-hover:bg-jetspan-amber mb-4 rounded-full flex h-14 w-14 transition-colors duration-300 items-center justify-center">
+          <div class="mb-4 rounded-full bg-jetspan-amber/20 flex h-14 w-14 transition-colors duration-300 items-center justify-center group-hover:bg-jetspan-amber">
             <div
               :class="point.icon"
-              class="text-jetspan-amber text-2xl transition-colors duration-300 group-hover:text-black"
+              class="text-2xl text-jetspan-amber transition-colors duration-300 group-hover:text-black"
             />
           </div>
 
@@ -71,15 +71,15 @@ const safetyPoints: SafetyPoint[] = [
           <h3 class="text-lg text-jetspan-black font-bold mb-2 dark:text-white">
             {{ point.title }}
           </h3>
-          <p class="text-sm text-jetspan-gray leading-relaxed dark:text-gray-400">
+          <p class="text-base text-jetspan-gray leading-relaxed dark:text-gray-400">
             {{ point.desc }}
           </p>
         </div>
       </div>
 
       <!-- Trust Badge -->
-      <div class="bg-jetspan-amber/10 mt-8 px-6 py-4 rounded-lg flex gap-3 items-center justify-center">
-        <div class="i-carbon-security text-jetspan-amber text-2xl" />
+      <div class="mt-8 px-6 py-4 rounded-lg bg-jetspan-amber/10 flex gap-3 items-center justify-center">
+        <div class="i-carbon-security text-2xl text-jetspan-amber" />
         <span class="text-sm text-jetspan-gray font-semibold dark:text-gray-400">LPGSASA Member — LP Gas Safety Association of South Africa</span>
       </div>
     </div>

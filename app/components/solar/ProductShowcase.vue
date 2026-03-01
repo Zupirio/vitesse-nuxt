@@ -87,6 +87,29 @@ const colorMap: Record<SolarColor, { bg: string, text: string, bgLight: string, 
   blue: { bg: 'bg-jetspan-blue', text: 'text-jetspan-blue', bgLight: 'bg-jetspan-blue/10', badgeBg: 'bg-jetspan-blue/20' },
   amber: { bg: 'bg-jetspan-amber', text: 'text-jetspan-amber', bgLight: 'bg-jetspan-amber/10', badgeBg: 'bg-jetspan-amber/20' },
 }
+
+const expandedImage = ref<{ src: string, alt: string } | null>(null)
+
+function openExpandedImage(src: string, alt: string) {
+  expandedImage.value = { src, alt }
+}
+
+function closeExpandedImage() {
+  expandedImage.value = null
+}
+
+function onKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape')
+    closeExpandedImage()
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', onKeydown)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onKeydown)
+})
 </script>
 
 <template>
@@ -126,8 +149,9 @@ const colorMap: Record<SolarColor, { bg: string, text: string, bgLight: string, 
             <div
               v-for="product in category.products"
               :key="product.name"
-              class="group border rounded-xl bg-gray-50 transition-all duration-300 overflow-hidden dark:border-jetspan-gray/30 dark:bg-jetspan-black/50 hover:shadow-lg"
+              class="group border rounded-xl bg-gray-50 cursor-zoom-in transition-all duration-300 overflow-hidden dark:border-jetspan-gray/30 dark:bg-jetspan-black/50 hover:shadow-lg"
               :class="`hover:border-jetspan-${category.color}/50`"
+              @click="openExpandedImage(product.image, product.name)"
             >
               <!-- Product Image -->
               <div class="p-4 bg-white flex h-48 items-center justify-center dark:bg-jetspan-black/30">
@@ -163,7 +187,7 @@ const colorMap: Record<SolarColor, { bg: string, text: string, bgLight: string, 
                   <li
                     v-for="spec in product.specs"
                     :key="spec"
-                    class="text-sm text-jetspan-gray flex items-start dark:text-gray-400"
+                    class="text-base text-jetspan-gray flex items-start dark:text-gray-400"
                   >
                     <div class="i-carbon-checkmark mr-2 mt-0.5 flex-shrink-0" :class="colorMap[category.color].text" />
                     {{ spec }}
@@ -181,6 +205,19 @@ const colorMap: Record<SolarColor, { bg: string, text: string, bgLight: string, 
           <span class="i-carbon-document" />
           Request Full Datasheets
         </NuxtLink>
+      </div>
+
+      <div
+        v-if="expandedImage"
+        class="p-4 bg-black/80 flex items-center inset-0 justify-center fixed z-100 backdrop-blur-sm"
+        @click="closeExpandedImage"
+      >
+        <img
+          :src="expandedImage.src"
+          :alt="expandedImage.alt"
+          class="rounded-lg bg-white max-h-[90vh] max-w-[90vw] object-contain"
+          @click.stop
+        >
       </div>
     </div>
   </section>

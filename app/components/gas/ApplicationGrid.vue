@@ -45,10 +45,10 @@ const applications: Application[] = [
           class="group card"
         >
           <!-- Icon Circle -->
-          <div class="bg-jetspan-amber/20 mb-6 rounded-full flex h-16 w-16 transition-transform duration-300 items-center justify-center group-hover:scale-110">
+          <div class="mb-6 rounded-full bg-jetspan-amber/20 flex h-16 w-16 transition-transform duration-300 items-center justify-center group-hover:scale-110">
             <div
               :class="app.icon"
-              class="text-jetspan-amber text-2xl"
+              class="text-2xl text-jetspan-amber"
             />
           </div>
 
@@ -56,7 +56,7 @@ const applications: Application[] = [
           <h3 class="text-xl text-jetspan-black font-bold mb-3 dark:text-white">
             {{ app.title }}
           </h3>
-          <p class="text-sm text-jetspan-gray leading-relaxed dark:text-gray-400">
+          <p class="text-base text-jetspan-gray leading-relaxed dark:text-gray-400">
             {{ app.desc }}
           </p>
         </div>

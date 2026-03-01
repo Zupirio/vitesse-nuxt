@@ -64,7 +64,7 @@ const terms = [
           </h3>
 
           <!-- Description -->
-          <p class="text-sm text-jetspan-gray leading-relaxed dark:text-gray-400">
+          <p class="text-base text-jetspan-gray leading-relaxed dark:text-gray-400">
             {{ term.description }}
           </p>
         </div>
