@@ -7,6 +7,8 @@ interface SolarProduct {
   specs: string[]
   badge: string
   image: string
+  price?: string
+  stores?: { name: string, url: string }[]
 }
 
 interface SolarCategory {
@@ -56,6 +58,18 @@ const categories: SolarCategory[] = [
         specs: ['3.5–5kW inverter', 'Built-in 5–10kWh battery', 'All-in-one compact design', 'MPPT charge controller', 'Mobile app monitoring'],
         badge: 'Residential',
         image: '/assets/products/solar/sunova-580w.jpg',
+      },
+      {
+        name: 'Hinen PS3000 Power Station',
+        model: 'PS3000 · 3000W / 2.56kWh',
+        specs: ['3000W output / 6000W peak', '2.56kWh LiFePO4 prismatic battery', 'Pure sine wave — safe for electronics', '~1.7-hr fast charge (2500W max)', 'UPS mode · <14ms switchover', 'Expandable up to 17.5kWh'],
+        badge: 'Portable',
+        image: '/assets/products/solar/hinen-ps3000.png',
+        price: 'R13,500.00',
+        stores: [
+          { name: 'Makro', url: 'https://www.makro.co.za/hinen-ps3000-pure-sine-wave-inverter/p/itm6a65833afa223?pid=IVTH7FD3H9TNGZPY' },
+          { name: 'Amazon', url: 'https://www.amazon.co.za/Hinen-PS3000-3000-Portable-Station/dp/B0FDWLJ9DV' },
+        ],
       },
     ],
   },
@@ -154,11 +168,11 @@ onBeforeUnmount(() => {
               @click="openExpandedImage(product.image, product.name)"
             >
               <!-- Product Image -->
-              <div class="p-4 bg-white flex h-48 items-center justify-center dark:bg-jetspan-black/30">
+              <div class="p-4 bg-white flex h-64 items-center justify-center dark:bg-jetspan-black/30">
                 <img
                   :src="product.image"
                   :alt="product.name"
-                  class="max-h-full max-w-full transition-transform duration-300 object-contain group-hover:scale-105"
+                  class="max-h-full max-w-full transition-transform duration-300 object-contain group-hover:scale-110"
                 >
               </div>
 
@@ -193,6 +207,21 @@ onBeforeUnmount(() => {
                     {{ spec }}
                   </li>
                 </ul>
+
+                <ProductPrice
+                  v-if="product.price"
+                  :price="product.price"
+                  :product-name="product.name"
+                  class="mt-4"
+                  @click.stop
+                />
+
+                <ProductStoreLinks
+                  v-if="product.stores"
+                  :stores="product.stores"
+                  class="mt-4"
+                  @click.stop
+                />
               </div>
             </div>
           </div>

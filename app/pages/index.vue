@@ -8,6 +8,7 @@ definePageMeta({
   <div>
     <HeroSection />
     <LazyProductsShowcase />
+    <LazyFeaturedProduct />
     <LazyWhyChooseUs />
     <LazyCTASection />
   </div>

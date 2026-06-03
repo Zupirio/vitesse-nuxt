@@ -28,6 +28,7 @@ const products = [
   'Crude Oil',
   'Petroleum Products',
   'Solar Solutions',
+  'Hinen PS3000 Power Station',
   'Gas (LPG)',
   'Other',
 ]

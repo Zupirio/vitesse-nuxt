@@ -22,7 +22,7 @@ useSeoMeta({
     <NuxtPage />
   </NuxtLayout>
   <WhatsAppButton />
-  <LeadCaptureModal />
+  <!-- <LeadCaptureModal /> -->
 </template>
 
 <style>
