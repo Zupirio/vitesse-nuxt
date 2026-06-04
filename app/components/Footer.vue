@@ -10,6 +10,7 @@ const navigation = {
     { name: 'Petroleum Products', path: '/products#petroleum-products' },
     { name: 'Solar Solutions', path: '/solar-solutions' },
     { name: 'Gas (LPG)', path: '/gas-lpg' },
+    { name: 'Fertilizer', path: '/fertilizer' },
   ],
   company: [
     { name: 'Our Story', path: '/about' },
@@ -99,16 +100,20 @@ const navigation = {
       </div>
 
       <!-- Quick Quote Banner -->
-      <div class="mb-12 flex flex-col items-center justify-between gap-4 rounded-xl border border-jetspan-yellow/20 bg-jetspan-yellow/5 p-6 sm:flex-row">
+      <div class="mb-12 p-6 border border-jetspan-yellow/20 rounded-xl bg-jetspan-yellow/5 flex flex-col gap-4 items-center justify-between sm:flex-row">
         <div>
-          <h3 class="text-lg font-bold text-white mb-1">Need a Quick Quote?</h3>
-          <p class="text-sm text-gray-400">Get pricing for diesel, solar, or gas via WhatsApp — fast, direct, no hassle.</p>
+          <h3 class="text-lg text-white font-bold mb-1">
+            Need a Quick Quote?
+          </h3>
+          <p class="text-sm text-gray-400">
+            Get pricing for diesel, solar, or gas via WhatsApp — fast, direct, no hassle.
+          </p>
         </div>
         <a
           :href="`https://wa.me/${companyInfo.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi Jetspan, I\'d like to request a quote.')}`"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn-whatsapp inline-flex flex-shrink-0 items-center gap-2 text-sm"
+          class="text-sm btn-whatsapp inline-flex flex-shrink-0 gap-2 items-center"
         >
           <div class="i-mdi-whatsapp text-xl" />
           WhatsApp Us

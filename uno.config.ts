@@ -79,6 +79,23 @@ export default defineConfig({
     'i-carbon-warning-alt',
     'i-carbon-tools',
     'i-carbon-checkmark-filled',
+    // Fertilizer — dynamic :class icons (Who We Work With + Products We Facilitate)
+    'i-carbon-license',
+    'i-carbon-building',
+    'i-carbon-harbor',
+    'i-carbon-enterprise',
+    'i-carbon-crop-growth',
+    'i-carbon-chemistry-reference',
+    'i-carbon-soil-moisture',
+    'i-carbon-soil-temperature',
+    'i-carbon-smoke',
+    'i-carbon-cube',
+    'i-carbon-test-tool',
+    'i-carbon-sprout',
+    // Fertilizer — per-item accent colour map (dynamic :class /10 backgrounds)
+    'bg-jetspan-yellow/10',
+    'bg-jetspan-green/10',
+    'bg-jetspan-orange/10',
     // Gas (SafetyCompliance, ApplicationGrid)
     'i-carbon-certificate-check',
     'i-carbon-pressure',

@@ -30,6 +30,7 @@ const products = [
   'Solar Solutions',
   'Hinen PS3000 Power Station',
   'Gas (LPG)',
+  'Fertilizer Products',
   'Other',
 ]
 

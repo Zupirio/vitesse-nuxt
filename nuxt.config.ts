@@ -59,6 +59,7 @@ export default defineNuxtConfig({
     // All product pages pre-rendered
     '/products': { prerender: true },
     '/en590-diesel': { prerender: true },
+    '/fertilizer': { prerender: true },
 
     // Static pages pre-rendered
     '/about': { prerender: true },
@@ -107,6 +108,7 @@ export default defineNuxtConfig({
         '/about',
         '/contact',
         '/en590-diesel',
+        '/fertilizer',
         '/color-preview',
       ],
 

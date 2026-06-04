@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Order Diesel', path: '/en590-diesel' },
   { name: 'Go Solar', path: '/solar-solutions' },
   { name: 'Get Gas', path: '/gas-lpg' },
+  { name: 'Fertilizer', path: '/fertilizer' },
   { name: 'Our Story', path: '/about' },
 ]
 
@@ -49,7 +50,7 @@ function isActive(path: string) {
           >
             {{ item.name }}
           </NuxtLink>
-          <NuxtLink to="/contact" class="btn text-sm px-4 py-2">
+          <NuxtLink to="/contact" class="text-sm btn px-4 py-2">
             Request a Quote
           </NuxtLink>
           <div class="pl-2">
@@ -98,8 +99,8 @@ function isActive(path: string) {
   </header>
 
   <!-- Mobile Fixed CTA -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white px-4 py-3 md:hidden dark:bg-jetspan-black dark:border-jetspan-gray">
-    <NuxtLink to="/contact" class="btn block w-full text-center text-sm">
+  <div class="px-4 py-3 border-t border-gray-200 bg-white bottom-0 left-0 right-0 fixed z-50 dark:border-jetspan-gray dark:bg-jetspan-black md:hidden">
+    <NuxtLink to="/contact" class="text-sm btn text-center w-full block">
       Request a Quote
     </NuxtLink>
   </div>
