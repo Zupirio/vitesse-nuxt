@@ -65,7 +65,7 @@ const categories: SolarCategory[] = [
         specs: ['3000W output / 6000W peak', '2.56kWh LiFePO4 prismatic battery', 'Pure sine wave — safe for electronics', '~1.7-hr fast charge (2500W max)', 'UPS mode · <14ms switchover', 'Expandable up to 17.5kWh'],
         badge: 'Portable',
         image: '/assets/products/solar/hinen-ps3000.png',
-        price: 'R14,000.00',
+        price: 'R14,500.00',
         stores: [
           { name: 'Makro', url: 'https://www.makro.co.za/hinen-ps3000-pure-sine-wave-inverter/p/itm6a65833afa223?pid=IVTH7FD3H9TNGZPY' },
           { name: 'Amazon', url: 'https://www.amazon.co.za/Hinen-PS3000-3000-Portable-Station/dp/B0FDWLJ9DV' },

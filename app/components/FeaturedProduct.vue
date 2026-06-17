@@ -2,7 +2,7 @@
 const product = {
   name: 'Hinen PS3000 Power Station',
   tagline: '3000W Portable Power · 2.56kWh LiFePO4 · Pure Sine Wave',
-  price: 'R14,000.00',
+  price: 'R14,500.00',
   description: 'An all-in-one 3000W portable power station with a built-in 2.56kWh LiFePO4 battery and pure sine wave inverter — built for home backup, load-shedding, camping and off-grid living.',
   features: [
     '3000W output / 6000W peak',

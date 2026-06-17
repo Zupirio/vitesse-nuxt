@@ -13,7 +13,7 @@ defineProps<{ stores: { name: string, url: string }[] }>()
       class="text-sm text-jetspan-green font-semibold px-4 py-2 border-2 border-jetspan-green/40 rounded-lg inline-flex gap-1.5 transition-colors items-center hover:text-white hover:bg-jetspan-green"
     >
       <div class="i-carbon-shopping-cart" />
-      Buy at {{ store.name }}
+      Buy from {{ store.name }}
       <div class="i-carbon-launch text-xs opacity-70" />
     </a>
   </div>
