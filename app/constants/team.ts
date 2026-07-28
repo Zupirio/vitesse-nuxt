@@ -69,6 +69,6 @@ export const teamMembers: TeamMember[] = [
 				petroleum industry, where he stays informed about the latest developments and trends.
 				His skills encompass legal research, compliance management, contract review, and a deep
 				understanding of the petroleum sector.`,
-		image: '/assets/team/operations-manager.jpg',
-	}
+		image: '/assets/team/operations-manager2.jpg',
+	}	
 ]
