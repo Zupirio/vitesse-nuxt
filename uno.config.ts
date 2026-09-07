@@ -137,6 +137,12 @@ export default defineConfig({
     'i-carbon-fire',
     'i-carbon-delivery',
     'i-carbon-energy-renewable',
+    // Solar ProductShowcase — gallery lightbox + datasheet link
+    'i-carbon-image',
+    'i-carbon-close',
+    'i-carbon-chevron-left',
+    'i-carbon-chevron-right',
+    'i-carbon-document-pdf',
   ],
   shortcuts: [
     // Buttons

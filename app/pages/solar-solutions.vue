@@ -4,8 +4,8 @@ definePageMeta({
 })
 
 useSeoMeta({
-  title: 'Solar Solutions | Jetspan — Commercial & Industrial Solar Systems',
-  description: 'Commercial and industrial solar systems with Megarevo microgrid inverters, Thornova N-type panels, and PowerCo lithium storage. From 5kW residential to 500kW industrial — load shedding sorted.',
+  title: 'Solar Solutions | Jetspan — Home & Commercial Solar Systems',
+  description: 'Solar and battery systems built on Astronergy N-type bifacial panels, Hinen hybrid inverters, and KNYEE lithium storage — from home backup to light-commercial installations. Load shedding sorted.',
 })
 </script>
 
@@ -14,7 +14,7 @@ useSeoMeta({
     <!-- Hero -->
     <SectionHero
       title="Power That Pays for Itself"
-      subtitle="Megarevo microgrid inverters, Thornova N-type panels, and PowerCo lithium storage — engineered for South African conditions."
+      subtitle="Astronergy N-type bifacial panels, Hinen hybrid inverters, and KNYEE lithium storage — engineered for South African conditions."
       badge="Load Shedding? Sorted."
       badge-icon="i-carbon-solar-panel"
       bg-image="/assets/hero/pexels-solar-6961215.jpg"

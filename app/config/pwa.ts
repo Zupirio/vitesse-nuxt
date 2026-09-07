@@ -36,7 +36,8 @@ export const pwa: ModuleOptions = {
   },
   workbox: {
     globPatterns: ['**/*.{js,css,html,txt,png,ico,svg}'],
-    globIgnores: ['**/assets/products/**', '**/temp assets/**'],
+    // Keep heavy on-demand assets out of the SW precache (datasheets are downloaded only on click)
+    globIgnores: ['**/assets/products/**', '**/temp assets/**', '**/datasheets/**'],
     navigateFallbackDenylist: [/^\/api\//],
     navigateFallback: '/',
     cleanupOutdatedCaches: true,

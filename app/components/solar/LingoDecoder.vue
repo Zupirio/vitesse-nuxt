@@ -8,12 +8,12 @@ const terms = [
   {
     name: 'Inverter',
     icon: 'i-carbon-settings-adjust',
-    description: 'The brain of the system. Converts DC power from panels into AC power your machines actually use. Megarevo microgrid inverters handle 30–500kW commercial sites.',
+    description: 'The brain of the system. Converts DC power from panels into AC power your machines actually use. Hinen hybrid inverters run 6kW single-phase homes and small businesses.',
   },
   {
     name: 'Lithium Cycles',
     icon: 'i-carbon-battery-full',
-    description: 'How many times you can charge and discharge your battery. Our PowerCo LiFePO4 banks deliver 7,000+ cycles at 90% DOD — that\'s 15+ years of daily use.',
+    description: 'How many times you can charge and discharge your battery. Our KNYEE LiFePO4 banks deliver up to 8,000 cycles at 80% DOD — that\'s 15+ years of daily use.',
   },
   {
     name: 'kWp (Kilowatt-peak)',
