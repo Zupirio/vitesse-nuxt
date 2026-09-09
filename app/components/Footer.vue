@@ -9,7 +9,7 @@ const navigation = {
     { name: 'Oil Products', path: '/products#crude-oil' },
     { name: 'Petroleum Products', path: '/products#petroleum-products' },
     { name: 'Solar Solutions', path: '/solar-solutions' },
-    { name: 'Gas (LPG)', path: '/gas-lpg' },
+    // { name: 'Gas (LPG)', path: '/gas-lpg' },
     { name: 'Fertilizer', path: '/fertilizer' },
   ],
   company: [

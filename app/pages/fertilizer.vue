@@ -117,7 +117,7 @@ interface MarketItem extends IconItem { title: string, desc: string, to: string 
 const otherMarkets: MarketItem[] = [
   { icon: 'i-carbon-gas-station', title: 'EN590 Diesel', desc: 'Verified ultra-low-sulphur diesel trading under Incoterms 2020.', to: '/en590-diesel', color: 'yellow' },
   { icon: 'i-carbon-solar-panel', title: 'Solar Solutions', desc: 'Commercial & industrial solar, storage and microgrid systems.', to: '/solar-solutions', color: 'teal' },
-  { icon: 'i-carbon-fire', title: 'Gas (LPG)', desc: 'Bulk LPG supply for industry, hospitality and agriculture.', to: '/gas-lpg', color: 'amber' },
+  // { icon: 'i-carbon-fire', title: 'Gas (LPG)', desc: 'Bulk LPG supply for industry, hospitality and agriculture.', to: '/gas-lpg', color: 'amber' },
 ]
 
 // FAQ accordion state

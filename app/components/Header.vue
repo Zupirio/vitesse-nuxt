@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Explore Solutions', path: '/products' },
   { name: 'Order Diesel', path: '/en590-diesel' },
   { name: 'Go Solar', path: '/solar-solutions' },
-  { name: 'Get Gas', path: '/gas-lpg' },
+  // { name: 'Get Gas', path: '/gas-lpg' },
   { name: 'Fertilizer', path: '/fertilizer' },
   { name: 'Our Story', path: '/about' },
 ]
